@@ -1,0 +1,3 @@
+!! switching command and control
+remove mod4 = Super_L
+add control = Super_L
