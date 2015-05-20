@@ -1,1 +1,9 @@
+#Adam Ryman
+#.gitignore
+
+#Vim files
 *.swp
+*.swo
+
+#Mac
+.DS_Store
