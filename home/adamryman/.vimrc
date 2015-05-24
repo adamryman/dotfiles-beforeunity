@@ -55,11 +55,3 @@ set smartcase
 "Remove ycm preview
 set completeopt -=preview
 
-"Spellchecking
-"autocmd tells me that I should be able to include multiple patterns with the
-"comma but it does not seem to work, also no way to for tolower without a
-"function
-:autocmd BufRead,BufNewFile txt :setlocal spell spelllang=en_us
-:autocmd BufRead,BufNewFile *.md :setlocal spell spelllang=en_us
-:autocmd BufRead,BufNewFile *.MD :setlocal spell spelllang=en_us
-
