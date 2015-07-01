@@ -13,9 +13,14 @@ Plugin 'gmarik/Vundle.vim'
 
 " Other vim packages managed by Vundle
 Plugin 'Valloric/YouCompleteMe'
+
 Plugin 'fatih/vim-go'
 
+Plugin 'tpope/vim-fugitive'
+
 Plugin 'sickill/vim-monokai'
+
+Plugin 'jmanoel7/vim-games'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -34,6 +39,18 @@ filetype plugin indent on    " required
 "### End Configure Vundle ###
 "
 "### Start General Configuration ###
+
+" Some Linux distributions set filetype /etc/vimrc
+" This is to force them away
+if exists("g:did_load_filettpes")
+	filetype off
+	filetype plugin indent off
+endif
+
+filetype plugin indent on
+
+"remove trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
 
 "syntax highlighting
 syntax on
@@ -55,3 +72,8 @@ set smartcase
 "Remove ycm preview
 set completeopt -=preview
 
+"Keybinding for switching windows
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
