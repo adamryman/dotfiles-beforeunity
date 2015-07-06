@@ -77,3 +77,9 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+"Common mistakes now fixed
+command W w
+command Q q
+command WQ wq
+command Wq wq

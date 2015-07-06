@@ -91,3 +91,5 @@ alias ctags="/usr/local/Cellar/ctags/5.8_1/bin/ctags"
 
 fpath=(~/.zsh/completions $fpath)
 autoload -Uz compinit && compinit
+
+alias :q="exit"
