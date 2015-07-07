@@ -83,3 +83,21 @@ command W w
 command Q q
 command WQ wq
 command Wq wq
+" Why does this not work?
+" command Q! q!
+
+"letting me see the string of commands
+:set showcmd
+
+"change my leader to space, using map allows me to see it with a \ in the
+"Also space space to leader leader for DOUBLE COMMANDS
+"showcmd space
+:map <space> <leader>
+:map <space><space> <leader><leader>
+
+"Quick quit and write
+:map <leader><leader>q :q<enter>
+:map <leader><leader>w :w<enter>
+
+"Lets see how fast I can add stuff to my vimrc
+:map <leader><leader>v <c-w>s:e ~/.vimrc<enter>G
