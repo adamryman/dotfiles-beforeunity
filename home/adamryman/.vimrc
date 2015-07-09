@@ -20,7 +20,7 @@ Plugin 'tpope/vim-fugitive'
 
 Plugin 'sickill/vim-monokai'
 
-Plugin 'jmanoel7/vim-games'
+Plugin 'natw/keyboard_cat.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -86,6 +86,17 @@ command Wq wq
 " Why does this not work?
 " command Q! q!
 
+"Lets me see those tabs and spaces
+function! ToggleViewWhitespace()
+	if &list ==# "0"
+		set list
+		set listchars=tab:>\ ,space:#
+		echo "did it work?"
+	else
+		set nolist
+		echo "Should not see whitespace now"
+	endif
+endfunction
 "letting me see the string of commands
 :set showcmd
 
@@ -100,4 +111,6 @@ command Wq wq
 :map <leader><leader>w :w<enter>
 
 "Lets see how fast I can add stuff to my vimrc
-:map <leader><leader>v <c-w>s:e ~/.vimrc<enter>G
+:map <leader><leader>v :sp ~/.vimrc<enter>G
+:map <leader><leader>s :source ~/.vimrc<enter>
+:map <leader><leader>o :sp<space>

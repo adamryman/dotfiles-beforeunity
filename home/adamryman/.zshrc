@@ -92,4 +92,7 @@ alias ctags="/usr/local/Cellar/ctags/5.8_1/bin/ctags"
 fpath=(~/.zsh/completions $fpath)
 autoload -Uz compinit && compinit
 
-alias :q="exit"
+# Change current running jdk, taken from: http://next.javaheadbrain.com/posts/2013/01/19/set-jdk-on-osx.html
+alias setjdk16='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)'
+alias setjdk17='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
+alias setjdk18='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
