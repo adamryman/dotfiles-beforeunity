@@ -56,10 +56,18 @@ filetype plugin indent on
 "remove trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 
-"syntax highlighting
-syntax on
 
-colorscheme monokai
+"IMPORTANT!!!!
+"For some resource monokai kills my html stlying
+"I will need to look over that
+"This is a hack to fix it
+if !exists("AlreadySourced")
+	colorscheme monokai
+	syntax on
+endif
+:let AlreadySourced = 1
+
+"syntax highlighting
 
 "Show the number you are on and the relative distance of all numbers from your
 "current line
@@ -83,22 +91,11 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 "Common mistakes now fixed
-command W w
-command Q q
-command WQ wq
-command Wq wq
+command! W w
+command! Q q
+command! WQ wq
+command! Wq wq
 
-"Lets me see those tabs and spaces
-function! ToggleViewWhitespace()
-	if &list ==# "0"
-		set list
-		set listchars=tab:>\ ,space:#
-		echo "did it work?"
-	else
-		set nolist
-		echo "Should not see whitespace now"
-	endif
-endfunction
 "letting me see the string of commands
 :set showcmd
 
@@ -109,10 +106,29 @@ endfunction
 :map <space><space> <leader><leader>
 
 "Quick quit and write
-:map <leader><leader>q :q<enter>
-:map <leader><leader>w :w<enter>
+:map <leader>q :q<enter>
+:map <leader>w :w<enter>
 
 "Lets see how fast I can add stuff to my vimrc
-:map <leader><leader>v :sp ~/.vimrc<enter>G
-:map <leader><leader>s :source ~/.vimrc<enter>
-:map <leader><leader>o :sp<space>
+:map <leader>v :sp ~/.vimrc<enter>G
+
+:map <leader>o :sp<space>
+
+"Resource current vimrc and current ftplugin
+if !exists("*ReSource")
+	function! ReSource()
+		execute "source ~/.vimrc"
+		execute "set filetype=" . &filetype
+	endfunction
+endif
+:map <leader>s :call ReSource()<enter>
+
+"Allows me to edit the config of any filetype quickly
+function! OpenFtpluginFile()
+	execute ":sp ~/.vim/ftplugin/" . &filetype . ".vim"
+endfunction
+:map <leader>f :call OpenFtpluginFile()<enter>
+
+"Lets me see those tabs and spaces
+set listchars=tab:>\ ,space:#
+:map <leader>t :set list!<enter>
