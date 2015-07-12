@@ -21,6 +21,10 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'sickill/vim-monokai'
 
 Plugin 'mattn/emmet-vim'
+
+"Silly
+Plugin 'natw/keyboard_cat.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -84,3 +88,31 @@ command Q q
 command WQ wq
 command Wq wq
 
+"Lets me see those tabs and spaces
+function! ToggleViewWhitespace()
+	if &list ==# "0"
+		set list
+		set listchars=tab:>\ ,space:#
+		echo "did it work?"
+	else
+		set nolist
+		echo "Should not see whitespace now"
+	endif
+endfunction
+"letting me see the string of commands
+:set showcmd
+
+"change my leader to space, using map allows me to see it with a \ in the
+"Also space space to leader leader for DOUBLE COMMANDS
+"showcmd space
+:map <space> <leader>
+:map <space><space> <leader><leader>
+
+"Quick quit and write
+:map <leader><leader>q :q<enter>
+:map <leader><leader>w :w<enter>
+
+"Lets see how fast I can add stuff to my vimrc
+:map <leader><leader>v :sp ~/.vimrc<enter>G
+:map <leader><leader>s :source ~/.vimrc<enter>
+:map <leader><leader>o :sp<space>
