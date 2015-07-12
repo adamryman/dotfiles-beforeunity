@@ -22,6 +22,13 @@ Plugin 'sickill/vim-monokai'
 
 Plugin 'mattn/emmet-vim'
 
+Plugin 'vim-pandoc/vim-pandoc'
+
+Plugin 'vim-pandoc/vim-pandoc-syntax'
+
+Plugin 'godlygeek/tabular'
+
+"Silly
 "Silly
 Plugin 'natw/keyboard_cat.vim'
 
