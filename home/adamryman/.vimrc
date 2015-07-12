@@ -20,7 +20,11 @@ Plugin 'tpope/vim-fugitive'
 
 Plugin 'sickill/vim-monokai'
 
+Plugin 'mattn/emmet-vim'
+
+"Silly
 Plugin 'natw/keyboard_cat.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
