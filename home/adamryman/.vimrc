@@ -139,3 +139,10 @@ endfunction
 "Lets me see those tabs and spaces
 set listchars=tab:>\ ,space:#
 :map <leader>t :set list!<enter>
+
+"Global yank and put from system buffer / clipboard
+"For more info http://stackoverflow.com/a/11489440
+"System buffer
+:map <leader>" "+
+"Quick system buffer put / clipboard
+:map <leader>p "+p
