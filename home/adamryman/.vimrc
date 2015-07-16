@@ -110,17 +110,19 @@ command! Wq wq
 "change my leader to space, using map allows me to see it with a \ in the
 "Also space space to leader leader for DOUBLE COMMANDS
 "showcmd space
-:map <space> <leader>
-:map <space><space> <leader><leader>
+map <space> <leader>
+map <space><space> <leader><leader>
+
+let maplocalleader = ","
 
 "Quick quit and write
-:map <leader>q :q<enter>
-:map <leader>w :w<enter>
+map <leader>q :q<enter>
+map <leader>w :w<enter>
 
 "Lets see how fast I can add stuff to my vimrc
-:map <leader>v :sp ~/.vimrc<enter>G
+map <leader>v :sp ~/.vimrc<enter>G
 
-:map <leader>o :sp<space>
+map <leader>o :sp<space>
 
 "Resource current vimrc and current ftplugin
 if !exists("*ReSource")
@@ -129,28 +131,27 @@ if !exists("*ReSource")
 		execute "set filetype=" . &filetype
 	endfunction
 endif
-:map <leader>s :call ReSource()<enter>
+map <leader>s :call ReSource()<enter>
 
 "Allows me to edit the config of any filetype quickly
 function! OpenFtpluginFile()
 	execute ":sp ~/.vim/ftplugin/" . &filetype . ".vim"
 endfunction
-:map <leader>f :call OpenFtpluginFile()<enter>
+map <leader>f :call OpenFtpluginFile()<enter>
 
 "Lets me see those tabs and spaces
 set listchars=tab:>\ ,space:#
-:map <leader>t :set list!<enter>
+map <leader>t :set list!<enter>
 
 "4 space tabs are nicer by default
 set tabstop=4
 "Global yank and put from system buffer / clipboard
 "For more info http://stackoverflow.com/a/11489440
 "System buffer
-:map <leader>" "+
+map <leader>' "+
 "Quick system buffer put / clipboard
-:map <leader>p "+p
-
+map <leader>p "+p
 
 "Personal help file currently located at $HOME/.vim.helpfiles/new-commands.md
 "Eventually learn how vim docs work and put it there
-:map <leader>h :sp $HOME/.vim/helpfiles/new-commands.md<enter>zRG
+map <leader>h :sp $HOME/.vim/helpfiles/new-commands.md<enter>zRG
