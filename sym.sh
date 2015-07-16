@@ -4,16 +4,23 @@
 
 cwd=$(pwd)
 
+# Backup for old things
+mkdir -p "$HOME/.__backup/dotfiles/"
+
 # Let us be explicit with our links
+
+ln -sf "${cwd}/.vimrc" "$HOME/test/"
 
 # Good old vim
 ln -sf "${cwd}/.vimrc" "$HOME/.vimrc"
 
 # Filetype specific things for vim
-ln -sf "${cwd}/.vim/ftplugin/" "$HOME/.vim/ftplugin"
+mv -n "$HOME/.vim/ftplugin" "$HOME/.__backup/dotfiles/"
+ln -sfn "${cwd}/.vim/ftplugin/" "$HOME/.vim/"
 
 # Personal vim help file
-ln -sf "${cwd}/.vim/helpfiles/" "$HOME/.vim/helpfiles"
+mv -n "$HOME/.vim/helpfiles" "$HOME/.__backup/dotfiles/"
+ln -sfn "${cwd}/.vim/helpfiles/" "$HOME/.vim/"
 
 # vimperator is a firefox extension that is awesome.
 # It makes firefox 99% mouse free. 100% recommend.
@@ -26,10 +33,13 @@ ln -sf "${cwd}/.bashrc" "$HOME/.bashrc"
 # something I can fully understand. Also bash is more portable so maybe I
 # should just customize bash instead
 ln -sf "${cwd}/.zshrc" "$HOME/.zshrc"
-ln -sf "${cwd}/.zsh/" "$HOME/.zsh"
+
+mv -n "$HOME/.zsh" "$HOME/.__backup/dotfiles/"
+ln -sfn "${cwd}/.zsh/" "$HOME/"
 
 # Window manager configuration and plugins
-ln -sf "${cwd}/.i3/" "$HOME/.i3/"
+mv -n "$HOME/.i3" "$HOME/.__backup/dotfiles/"
+ln -sfn "${cwd}/.i3/" "$HOME/"
 
 # These are for changing the keyboard on a mac for debian. These will
 # eventually only be in a specific branch
