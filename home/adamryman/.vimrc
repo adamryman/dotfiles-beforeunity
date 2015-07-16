@@ -146,3 +146,8 @@ set listchars=tab:>\ ,space:#
 :map <leader>" "+
 "Quick system buffer put / clipboard
 :map <leader>p "+p
+
+
+"Personal help file currently located at $HOME/.vim.helpfiles/new-commands.md
+"Eventually learn how vim docs work and put it there
+:map <leader>h :sp $HOME/.vim/helpfiles/new-commands.md<enter>zRG
