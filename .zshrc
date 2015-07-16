@@ -103,3 +103,20 @@ alias ch="git checkout "
 alias gc="git commit -m "
 alias ga="git add "
 alias gs="git status"
+
+# Adding for resourcing zshrc
+alias reso="source ~/.zshrc"
+
+# Adding for editing zshrc quickly
+alias zshrc="vim ~/.zshrc"
+
+# VI MODE
+# bindkey -v
+
+# Delay is normally 0.4 seconds, this is 0.1 seconds. May cause issues
+# increase if there are problems
+# export KEYTIMEOUT=1
+
+# Follow this tutorial and really understand it http://dougblack.io/words/zsh-vi-mode.html
+
+
