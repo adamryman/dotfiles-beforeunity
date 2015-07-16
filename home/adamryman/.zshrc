@@ -1,5 +1,5 @@
+source ~/.local/before/.zshrc
 # Path to your oh-my-zsh installation.
-export ZSH=/home/adamryman/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -93,3 +93,6 @@ alias :q="exit"
 
 export GOPATH=~/projects/go
 
+. ~/.nvm/nvm.sh
+
+export SPLUNK_HOME="/opt/splunk/bin"

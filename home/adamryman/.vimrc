@@ -28,7 +28,7 @@ Plugin 'vim-pandoc/vim-pandoc-syntax'
 
 Plugin 'godlygeek/tabular'
 
-Plugin 'adamryman/twonote'
+Plugin 'adamryman/twonote-vim'
 
 "Silly
 Plugin 'natw/keyboard_cat.vim'
