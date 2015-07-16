@@ -90,3 +90,6 @@ fpath=(~/.zsh/completions $fpath)
 autoload -Uz compinit && compinit
 
 alias :q="exit"
+
+export GOPATH=~/projects/go
+

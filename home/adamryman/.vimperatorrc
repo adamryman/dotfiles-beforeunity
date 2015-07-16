@@ -13,3 +13,5 @@ map J :tabprevious<Return>
 map K :tabnext<Return>
 
 map s :tabopen google<space>
+
+set gui=none

@@ -28,7 +28,8 @@ Plugin 'vim-pandoc/vim-pandoc-syntax'
 
 Plugin 'godlygeek/tabular'
 
-"Silly
+Plugin 'adamryman/twonote'
+
 "Silly
 Plugin 'natw/keyboard_cat.vim'
 
@@ -140,6 +141,8 @@ endfunction
 set listchars=tab:>\ ,space:#
 :map <leader>t :set list!<enter>
 
+"4 space tabs are nicer by default
+set tabstop=4
 "Global yank and put from system buffer / clipboard
 "For more info http://stackoverflow.com/a/11489440
 "System buffer
