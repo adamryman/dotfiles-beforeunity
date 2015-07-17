@@ -26,7 +26,7 @@ ln -sf "${cwd}/.bashrc" "$HOME/.bashrc"
 # something I can fully understand. Also bash is more portable so maybe I
 # should just customize bash instead
 ln -sf "${cwd}/.zshrc" "$HOME/.zshrc"
-ln -sf "${cwd}/.zsh/" "$HOME/.zshrc"
+ln -sf "${cwd}/.zsh/" "$HOME/.zsh"
 
 # Window manager configuration and plugins
 ln -sf "${cwd}/.i3/" "$HOME/.i3/"
