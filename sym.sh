@@ -10,7 +10,10 @@ cwd=$(pwd)
 ln -sf "${cwd}/.vimrc" "$HOME/.vimrc"
 
 # Filetype specific things for vim
-ln -sf "${cwd}/.vim/ftplugin/" "$HOME/.vim/ftplugin/"
+ln -sf "${cwd}/.vim/ftplugin/" "$HOME/.vim/ftplugin"
+
+# Personal vim help file
+ln -sf "${cwd}/.vim/helpfiles/" "$HOME/.vim/helpfiles"
 
 # vimperator is a firefox extension that is awesome.
 # It makes firefox 99% mouse free. 100% recommend.
