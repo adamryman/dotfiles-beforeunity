@@ -93,7 +93,13 @@ alias :q="exit"
 
 export GOPATH=~/projects/go
 
-#Needs to be in .local on work machine
-#. ~/.nvm/nvm.sh
+# Needs to be in .local on work machine
+# . ~/.nvm/nvm.sh
 
 export SPLUNK_HOME="/opt/splunk/bin"
+
+# Some temp git aliases
+alias ch="git checkout "
+alias gc="git commit -m "
+alias ga="git add "
+alias gs="git status"
