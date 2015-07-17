@@ -1,2 +1,2 @@
 # Path to oh-my-zsh
-export ZSH=/home/adamryman/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
