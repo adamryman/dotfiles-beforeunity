@@ -1,0 +1,17 @@
+"3.9 (created: 2015/02/15 15:49:05)
+
+"Looks like vimium!
+highlight Hint font-family: monospace; font-size: 13px; background: linear-gradient(to bottom, #FFF785, #FFC543); box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3); color: #302505; font-weight: bold; padding: 0px 4px 0px 4px; text-transform: uppercase; z-index: 99999 !important;
+
+map ? t<Space>liberator://help/intro<Return>
+
+set hintchars=hjklasdfgyuiopqwertnmzxcvb
+source! /home/adamryman/.vimperatorrc.local
+
+"better tab movements
+map J :tabprevious<Return>
+map K :tabnext<Return>
+
+map s :tabopen google<space>
+
+set gui=none

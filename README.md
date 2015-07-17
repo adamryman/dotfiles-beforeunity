@@ -14,7 +14,7 @@ Inspiration taken from [zaqthefreshman/dotfiles](https://github.com/zaqthefreshm
 
 ###TODO
 
-- Create symlink script
+- Add local things to sym linking script
 - Flesh out the idea of having ~/.local/before and ~/.local/after and source these files at the start and end of each dotfile
 	- For paths so that machines can have locally different paths
 	- Make a good default path for each one, but these files will be copied
