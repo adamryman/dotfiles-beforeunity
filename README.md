@@ -2,10 +2,14 @@
 
 For setting up a new dev box
 
-You must give setup.sh and removeBackups.sh execute privileges in order to run them.
+You must give setup.sh execute privileges in order to run them.
+
+This will create a bunch of sym links from where these dotfiles usually live to this repo
+
+CURRENTLY DOES NOT BACK UP EVERYTHING, READ THE CODE BEFORE RUNNING IT.
 
 ```shell
-chmod a+x setup.sh removeBackups.sh
+chmod a+x setup.sh
 ```
 
 Inspiration taken from [zaqthefreshman/dotfiles](https://github.com/zaqthefreshman/dotfiles)
