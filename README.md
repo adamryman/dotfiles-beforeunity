@@ -1,5 +1,3 @@
-##Going under some big changes soon, these instructions are currently not working.
-
 #dotfiles
 
 For setting up a new dev box
