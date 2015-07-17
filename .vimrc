@@ -30,6 +30,8 @@ Plugin 'godlygeek/tabular'
 
 Plugin 'adamryman/twonote-vim'
 
+Plugin 'marijnh/tern_for_vim'
+
 "Silly
 Plugin 'natw/keyboard_cat.vim'
 
