@@ -22,10 +22,6 @@ Plugin 'sickill/vim-monokai'
 
 Plugin 'mattn/emmet-vim'
 
-Plugin 'vim-pandoc/vim-pandoc'
-
-Plugin 'vim-pandoc/vim-pandoc-syntax'
-
 Plugin 'godlygeek/tabular'
 
 Plugin 'adamryman/twonote-vim'
