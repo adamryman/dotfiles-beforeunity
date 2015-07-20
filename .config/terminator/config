@@ -1,0 +1,5 @@
+[profiles]
+ [[default]]
+  show_titlebar = false
+  scrollbar_position = disabled
+
