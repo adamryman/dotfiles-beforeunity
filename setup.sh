@@ -9,6 +9,7 @@ mkdir -p "$HOME/.__backup/dotfiles/"
 
 # Path stuff
 cp -rn "${cwd}/.local" "$HOME"
+mkdir -p "$HOME/.config"
 
 # Let us be explicit with our links
 
@@ -46,5 +47,10 @@ ln -sfn "${cwd}/.i3/" "$HOME/"
 # eventually only be in a specific branch
 # Makes command key into control key
 # I am not actually using the super key at all
+# terminator config
 ln -sf "${cwd}/.xinitrc" "$HOME/.xinitrc"
 ln -sf "${cwd}/.Xmodmap" "$HOME/.Xmodmap"
+
+# terminator config
+mv -n "$HOME/.config/terminator" "$HOME/.__backup/dotfiles/"
+ln -sf "${cwd}/.config/terminator" "$HOME/.config/terminator"
