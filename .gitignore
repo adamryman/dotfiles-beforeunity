@@ -1,1 +1,6 @@
+# To hide my markdown render
 __render/
+
+# vim swap files
+*.swp
+
