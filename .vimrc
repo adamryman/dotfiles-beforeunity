@@ -155,4 +155,4 @@ map <leader>p "+p
 map <leader>h :sp $HOME/.vim/helpfiles/new-commands.md<enter>zRG
 
 "TwoNote!
-map <leader>j :TwoNote<enter>
+"map <leader>j :TwoNote<enter>
