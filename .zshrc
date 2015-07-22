@@ -93,7 +93,7 @@ alias :q="exit"
 
 export GOPATH=~/projects/go
 
-export SPLUNK_HOME="/opt/splunk/bin"
+export SPLUNK_HOME="/opt/splunk"
 
 # Some temp git aliases
 alias ch="git checkout "

@@ -156,3 +156,9 @@ map <leader>h :sp $HOME/.vim/helpfiles/new-commands.md<enter>zRG
 
 "TwoNote!
 "map <leader>j :TwoNote<enter>
+
+" I want faster macros
+" So leader 1 will start recording a macro on key 2
+" and leader 2 will play that back
+map <leader>2 @2
+map <leader>1 q2
