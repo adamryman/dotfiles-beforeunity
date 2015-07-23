@@ -28,6 +28,8 @@ Plugin 'adamryman/twonote-vim'
 
 Plugin 'marijnh/tern_for_vim'
 
+Plugin 'tpope/vim-surround'
+
 "Silly
 Plugin 'natw/keyboard_cat.vim'
 
