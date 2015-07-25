@@ -92,3 +92,13 @@ alias zshrc="vim ~/.zshrc"
 
 # Follow this tutorial and really understand it http://dougblack.io/words/zsh-vi-mode.html
 
+# http://charlieharvey.org.uk/page/google_did_you_mean_from_the_terminal/
+# Looks for 'the original' in a google search and prints google's spell check
+# Seems to not work on search if it only has 'did you mean'
+# Need to learn regex to improve this, also add multiword arguments
+# I had to wrap 'https://goo... with quotes for zsh
+gsc() {
+	q=$1
+	lynx -dump 'https://www.google.com/search?q='$q | grep -e 'the original' | perl -nE 's/.*\]([^\.]+)\..*/$1/;print';
+}
+
