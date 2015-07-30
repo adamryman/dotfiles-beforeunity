@@ -92,3 +92,5 @@ alias zshrc="vim ~/.zshrc"
 
 # Follow this tutorial and really understand it http://dougblack.io/words/zsh-vi-mode.html
 
+# ssh to my server
+alias web="ssh adamryman@adamryman.com"
