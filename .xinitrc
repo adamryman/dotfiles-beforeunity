@@ -7,7 +7,7 @@ setxkbmap -option caps:escape
 
 # Change key repeat delay and rate
 # xset r rate DELAY RATE
-xset r rate 250 50
+# xset r rate 250 50
 
 
 # more keyboard stuff in here
