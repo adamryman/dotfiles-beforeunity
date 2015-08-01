@@ -20,4 +20,4 @@ Inspiration taken from [zaqthefreshman/dotfiles](https://github.com/zaqthefreshm
 - Flesh out the idea of having ~/.local/before and ~/.local/after and source these files at the start and end of each dotfile
 	- For paths so that machines can have locally different paths
 	- Make a good default path for each one, but these files will be copied
-- Get my branches back in sync
+- Add Vundle as a submodule or at least enough Vundle to bootstrap
