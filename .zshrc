@@ -104,4 +104,3 @@ gsc() {
 
 # ssh to my server
 alias web="ssh adamryman@adamryman.com"
->>>>>>> e059b1432e9d3ef6b3b7f51394966bedcc70d11f
