@@ -104,3 +104,7 @@ gsc() {
 
 # ssh to my server
 alias web="ssh adamryman@adamryman.com"
+
+# Change to current "real" path, ie cd to symlink and call this to be in the full path of the where the sym link points to
+
+alias cdreal="cd $(realpath $PWD)"
