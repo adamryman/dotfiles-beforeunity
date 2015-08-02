@@ -27,13 +27,16 @@ font pango:DejaVu Sans Mono 8
 set $up k
 set $down j
 set $left h
-set $right l 
+set $right l
 
 # use Mouse+Mod1 to drag floating windows to their wanted position
 floating_modifier Mod1
 
 # start a terminal
 bindsym Mod1+Return exec i3-sensible-terminal
+
+# start firefox
+bindsym Mod1+backslash exec firefox
 
 # kill focused window
 bindsym Mod1+Shift+q kill
