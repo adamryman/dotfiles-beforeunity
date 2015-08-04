@@ -21,3 +21,7 @@ Inspiration taken from [zaqthefreshman/dotfiles](https://github.com/zaqthefreshm
 	- For paths so that machines can have locally different paths
 	- Make a good default path for each one, but these files will be copied
 - Add Vundle as a submodule or at least enough Vundle to bootstrap
+- Comment .zshrc
+- Comment .bashrc
+- Comment plugin section of .vimrc
+- Create a lightwight option of .vimrc
