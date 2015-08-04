@@ -12,6 +12,9 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Other vim packages managed by Vundle
+
+
+" Need to add comments for each of these
 Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'fatih/vim-go'
@@ -29,6 +32,8 @@ Plugin 'adamryman/twonote-vim'
 Plugin 'marijnh/tern_for_vim'
 
 Plugin 'tpope/vim-surround'
+
+Plugin 'Raimondi/delimitMate'
 
 "Silly
 Plugin 'natw/keyboard_cat.vim'
