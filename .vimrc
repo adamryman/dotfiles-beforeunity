@@ -35,6 +35,9 @@ Plugin 'tpope/vim-surround'
 
 Plugin 'Raimondi/delimitMate'
 
+" Something wrong with python, see twonote
+"Plugin 'FredKSchott/CoVim'
+
 "Silly
 Plugin 'natw/keyboard_cat.vim'
 
@@ -169,3 +172,10 @@ map <leader>h :sp $HOME/.vim/helpfiles/new-commands.md<enter>zRG
 " and leader 2 will play that back
 map <leader>2 @2
 map <leader>1 q2
+
+" Set shell to be zsh interactive, I was having a problem where I could not
+" use my zsh functions and aliases from vim, but this fixes it
+" UPDATE This broke vim further, when external commands were ran, vim
+" sometimes to be suspended tty output
+" https://github.com/zaiste/vimified/issues/89
+" set shell=/usr/bin/zsh\ -i

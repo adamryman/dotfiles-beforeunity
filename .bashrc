@@ -76,3 +76,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+gsc() {
+	q=$1;
+	lynx -dump https://www.google.com/search?q=$q | grep -e 'the original' | perl -nE 's/.*\]([^\.]+)\..*/$1/;print';
+	}
