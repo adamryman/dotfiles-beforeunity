@@ -17,14 +17,17 @@ mkdir -p "$HOME/.config"
 ln -sf "${cwd}/.vimrc" "$HOME/.vimrc"
 
 # Filetype specific things for vim
+mkdir -p "$HOME/.vim/"
 mv -n "$HOME/.vim/ftplugin" "$HOME/.__backup/dotfiles/"
 ln -sfn "${cwd}/.vim/ftplugin/" "$HOME/.vim/"
 
 # Personal vim help file
+mkdir -p "$HOME/.vim/"
 mv -n "$HOME/.vim/helpfiles" "$HOME/.__backup/dotfiles/"
 ln -sfn "${cwd}/.vim/helpfiles/" "$HOME/.vim/"
 
 # Vundle, used to install all my plugins
+mkdir -p "$HOME/.vim/bundle/"
 mv -n "$HOME/.vim/bundle/Vundle.vim" "$HOME/.__backup/dotfiles/Vundle.vim"
 ln -sfn "${cwd}/.vim/bundle/Vundle.vim" "$HOME/.vim/bundle/"
 
