@@ -4,6 +4,8 @@
 
 cwd=$(pwd)
 
+git submodule update --init --recursive
+
 # Backup for old things
 mkdir -p "$HOME/.__backup/dotfiles/"
 
