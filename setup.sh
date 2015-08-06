@@ -24,6 +24,10 @@ ln -sfn "${cwd}/.vim/ftplugin/" "$HOME/.vim/"
 mv -n "$HOME/.vim/helpfiles" "$HOME/.__backup/dotfiles/"
 ln -sfn "${cwd}/.vim/helpfiles/" "$HOME/.vim/"
 
+# Vundle, used to install all my plugins
+mv -n "$HOME/.vim/bundle/Vundle.vim" "$HOME/.__backup/dotfiles/Vundle.vim"
+ln -sfn "${cwd}/.vim/bundle/Vundle.vim" "$HOME/.vim/bundle/"
+
 # vimperator is a firefox extension that is awesome.
 # It makes firefox 99% mouse free. 100% recommend.
 ln -sf "${cwd}/.vimperatorrc" "$HOME/.vimperatorrc"
