@@ -35,6 +35,8 @@ Plugin 'tpope/vim-surround'
 
 Plugin 'Raimondi/delimitMate'
 
+Plugin 'easymotion/vim-easymotion'
+
 " Something wrong with python, see twonote
 "Plugin 'FredKSchott/CoVim'
 
