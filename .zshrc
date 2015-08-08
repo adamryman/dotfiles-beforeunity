@@ -108,3 +108,7 @@ alias web="ssh adamryman@adamryman.com"
 # Change to current "real" path, ie cd to symlink and call this to be in the full path of the where the sym link points to
 
 alias cdreal="cd $(realpath $PWD)"
+
+# Run and compile all go files
+# TODO: Exclude test files
+alias gogo="go run *.go"
