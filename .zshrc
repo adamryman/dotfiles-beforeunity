@@ -108,3 +108,8 @@ alias web="ssh adamryman@adamryman.com"
 # Change to current "real" path, ie cd to symlink and call this to be in the full path of the where the sym link points to
 
 alias cdreal="cd $(realpath $PWD)"
+
+# Switch between different JDK https://wimdeblauwe.wordpress.com/2014/03/20/switching-easily-between-java-jdks-on-mac-os-x/
+alias setJdk6='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)'
+alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
+alias setJdk8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
