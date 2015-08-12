@@ -112,3 +112,9 @@ alias cdreal="cd $(realpath $PWD)"
 # Run and compile all go files
 # TODO: Exclude test files
 alias gogo="go run *.go"
+
+# Switch between different JDK https://wimdeblauwe.wordpress.com/2014/03/20/switching-easily-between-java-jdks-on-mac-os-x/
+alias setJdk6='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)'
+alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
+alias setJdk8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
+>>>>>>> a88ef8b046cfb9791a8d393af394611445018369
