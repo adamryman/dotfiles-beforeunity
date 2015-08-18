@@ -36,7 +36,8 @@ plugins=(git git-extras nvm)
 # ----------------------------------------
 
 # I need to look into how paths work a bit more
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/go/bin:/usr/local/go/bin"
+PATH="/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/go/bin:/usr/local/go/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh

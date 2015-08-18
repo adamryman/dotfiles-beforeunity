@@ -3,6 +3,7 @@
 alias git=hub
 
 # add this path to the path variable so that we can access go bins from any directory
+PATH=/usr/bin:/bin:/usr/sbin:/sbin
 export PATH=$PATH:/usr/local/go/bin
 
 
