@@ -117,4 +117,3 @@ alias gogo="go run *.go"
 alias setJdk6='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)'
 alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
 alias setJdk8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
->>>>>>> a88ef8b046cfb9791a8d393af394611445018369
