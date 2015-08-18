@@ -62,4 +62,10 @@ ln -sf "${cwd}/.Xmodmap" "$HOME/.Xmodmap"
 
 # terminator config
 mv -n "$HOME/.config/terminator" "$HOME/.__backup/dotfiles/"
-ln -sf "${cwd}/.config/terminator" "$HOME/.config/terminator"
+ln -sfn "${cwd}/.config/terminator" "$HOME/.config/terminator"
+
+# fonts config
+# I don't know what this config does exactly, but my fonts look way better
+# Might want to copy ubuntu / xubuntu's version of this file
+mv -n "$HOME/.config/fontconfig" "$HOME/.__backup/dotfiles/"
+ln -sfn "${cwd}/.config/fontconfig" "$HOME/.config/fontconfig"
