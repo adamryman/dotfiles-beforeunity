@@ -17,8 +17,8 @@ function! OpenInFirefox()
 endfunction
 
 " For opening the render in firefox and rerendering it
-map <leader><leader>j :call RenderMarkdown()<enter>
-map <leader><leader>f :call OpenInFirefox()<enter>
+"map <leader><leader>j :call RenderMarkdown()<enter>
+"map <leader><leader>f :call OpenInFirefox()<enter>
 
 " Allows me to align pandoc pipe tables using Tabularize
-map <leader><leader>t :Tab /\|<enter>
+"map <leader><leader>t :Tab /\|<enter>
