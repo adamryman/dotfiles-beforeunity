@@ -48,6 +48,9 @@ ln -sf "${cwd}/.zshrc" "$HOME/.zshrc"
 mv -n "$HOME/.zsh" "$HOME/.__backup/dotfiles/"
 ln -sfn "${cwd}/.zsh/" "$HOME/"
 
+mv -n "$HOME/.oh-my-zsh" "$HOME/.__backup/dotfiles/"
+ln -sfn "${cwd}/.oh-my-zsh/" "$HOME/"
+
 # Window manager configuration and plugins
 mv -n "$HOME/.i3" "$HOME/.__backup/dotfiles/"
 ln -sfn "${cwd}/.i3/" "$HOME/"
@@ -69,3 +72,4 @@ ln -sfn "${cwd}/.config/terminator" "$HOME/.config/terminator"
 # Might want to copy ubuntu / xubuntu's version of this file
 mv -n "$HOME/.config/fontconfig" "$HOME/.__backup/dotfiles/"
 ln -sfn "${cwd}/.config/fontconfig" "$HOME/.config/fontconfig"
+
