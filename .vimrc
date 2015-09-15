@@ -155,6 +155,8 @@ map <leader>t :set list!<enter>
 
 "4 space tabs are nicer by default
 set tabstop=4
+set shiftwidth=4
+
 "Global yank and put from system buffer / clipboard
 "For more info http://stackoverflow.com/a/11489440
 "System buffer
