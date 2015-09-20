@@ -70,6 +70,11 @@ ln -sfn "${cwd}/.config/terminator" "$HOME/.config/terminator"
 # fonts config
 # I don't know what this config does exactly, but my fonts look way better
 # Might want to copy ubuntu / xubuntu's version of this file
-mv -n "$HOME/.config/fontconfig" "$HOME/.__backup/dotfiles/"
+mv -n "$HOME/.config/fontconfig" "$HOME/.__backup/dotfiles/.config"
 ln -sfn "${cwd}/.config/fontconfig" "$HOME/.config/fontconfig"
 
+# w3m config - terminal web browser
+# pretty cool, might have sold me on emacs
+mkdir -p $HOME/.w3m
+mv -n "$HOME/.w3m/keybind" "$HOME/.__backup/dotfiles/.w3m/"
+ln -sf "{cwd}/.w3m/keymap" "$HOME/.w3m/keymap"
