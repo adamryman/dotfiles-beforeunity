@@ -1,5 +1,6 @@
 # w3m vim-like keymap file
-#   by @eiiches
+#   borrow from @eiiches
+#   modified greatly by @adamryman
 
 ########## invalidate defaults ##########
 keymap W NULL
@@ -203,7 +204,5 @@ keymap t TAB_GOTO
 keymap T TAB_MENU
 
 ########## quit ##########
-keymap :q QUIT 
-keymap ZZ QUIT
-keymap ZQ EXIT
+keymap :q EXIT 
 keymap Q EXIT
