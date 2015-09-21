@@ -1,6 +1,8 @@
 
 # hub is a git wrapper that gives nice github commands
-alias git=hub
+if which hub; then
+	alias git=hub
+fi
 
 # add this path to the path variable so that we can access go bins from any directory
 PATH=/usr/bin:/bin:/usr/sbin:/sbin
