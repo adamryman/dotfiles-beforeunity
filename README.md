@@ -14,7 +14,15 @@ chmod a+x setup.sh
 
 Inspiration taken from [zaqthefreshman/dotfiles](https://github.com/zaqthefreshman/dotfiles)
 
-###TODO
+### Change caps lock to Esc
+
+For base linux agetty to change caps lock to escape you edit `/etc/default/keyboard` and change
+
+```
+XKBOPTIONS="caps:escape"
+```
+
+### TODO
 
 - Add local things to sym linking script
 - Flesh out the idea of having ~/.local/before and ~/.local/after and source these files at the start and end of each dotfile
