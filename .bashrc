@@ -4,6 +4,13 @@ if which hub; then
 	alias git=hub
 fi
 
+# search google with w3m
+google() {
+        IFS="+"
+        export query="$@"
+        w3m http://google.com/search?q="$query"
+}
+
 # add this path to the path variable so that we can access go bins from any directory
 PATH=/usr/bin:/bin:/usr/sbin:/sbin
 export PATH=$PATH:/usr/local/go/bin
