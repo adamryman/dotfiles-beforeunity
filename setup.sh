@@ -77,7 +77,7 @@ ln -sfn "${cwd}/.config/fontconfig" "$HOME/.config/fontconfig"
 # pretty cool, might have sold me on emacs
 mkdir -p $HOME/.w3m
 mv -n "$HOME/.w3m/keybind" "$HOME/.__backup/dotfiles/.w3m/"
-ln -sf "{cwd}/.w3m/keymap" "$HOME/.w3m/keymap"
+ln -sf "${cwd}/.w3m/keymap" "$HOME/.w3m/keymap"
 
 # tmux config for tty
 # tmux that behaves like i3, will create a config for copy mode as well
