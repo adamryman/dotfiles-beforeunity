@@ -168,13 +168,6 @@ bar {
         status_command i3status
 }
 
-#######################################################################
-# automatically start i3-config-wizard to offer the user to create a
-# keysym-based config which used his favorite modifier (alt or windows)
-#
-# i3-config-wizard will not launch if there already is a config file
-# in ~/.i3/config.
-#
-# Please remove the following exec line:
-#######################################################################
-exec i3-config-wizard
+exec --no-startup-id xfce4-volumed
+exec --no-startup-id nm-applet
+exec --no-startup-id xfce4-power-manager
