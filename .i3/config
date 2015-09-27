@@ -184,3 +184,5 @@ exec synclient HorizScrollDelta=-111
 exec synclient VertScrollDelta=-111
 exec synclient TapButton1=0
 exec synclient TapButton2=0
+# Enable palm detection
+exec synclient PalmDetect=1
