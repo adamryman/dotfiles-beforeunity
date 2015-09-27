@@ -59,7 +59,7 @@ source $ZSH/oh-my-zsh.sh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # hub is a git wrapper that gives nice github commands
-alias git="hub"
+# alias git="hub"
 
 alias ctags="/usr/local/Cellar/ctags/5.8_1/bin/ctags"
 
