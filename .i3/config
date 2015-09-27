@@ -178,7 +178,9 @@ exec --no-startup-id xfce4-power-manager
 
 # touchpad settings Mac style scrolling, both horizontal and vertial
 # Also disable tap to click, and two finger tap to right click
-exec synclient HorizTwoFingerScroll=2
-exec synclient VertTwoFingerScroll=2
+exec synclient HorizTwoFingerScroll=1
+exec synclient VertTwoFingerScroll=1
+exec synclient HorizScrollDelta=-111
+exec synclient VertScrollDelta=-111
 exec synclient TapButton1=0
 exec synclient TapButton2=0
