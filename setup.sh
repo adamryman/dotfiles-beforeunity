@@ -48,8 +48,9 @@ ln -sf "${cwd}/.zshrc" "$HOME/.zshrc"
 mv -n "$HOME/.zsh" "$HOME/.__backup/dotfiles/"
 ln -sfn "${cwd}/.zsh/" "$HOME/"
 
-mv -n "$HOME/.oh-my-zsh" "$HOME/.__backup/dotfiles/"
-ln -sfn "${cwd}/.oh-my-zsh/" "$HOME/"
+mkdir -p "$HOME/.__backup/dotfiles/plugins/vi-mode/"
+mv -n "$HOME/.oh-my-zsh/plugins/vi-mode/vi-mode.plugin.zsh" "$HOME/.__backup/dotfiles/plugins/vi-mode/"
+ln -sf "${cwd}/.oh-my-zsh/plugins/vi-mode/vi-mode.plugin.zsh" "$HOME/.oh-my-zsh/plugins/vi-mode/vi-mode.plugin.zsh"
 
 # Window manager configuration and plugins
 mv -n "$HOME/.i3" "$HOME/.__backup/dotfiles/"
@@ -76,5 +77,11 @@ ln -sfn "${cwd}/.config/fontconfig" "$HOME/.config/fontconfig"
 # w3m config - terminal web browser
 # pretty cool, might have sold me on emacs
 mkdir -p $HOME/.w3m
-mv -n "$HOME/.w3m/keybind" "$HOME/.__backup/dotfiles/.w3m/"
+mv -n "$HOME/.w3m/keymap" "$HOME/.__backup/dotfiles/.w3m/"
 ln -sf "${cwd}/.w3m/keymap" "$HOME/.w3m/keymap"
+
+# xfce4-terminal seems good enough
+mkdir -p "$HOME/.config/xfce4/terminal"
+mkdir -p "$HOME/.__backup/dotfiles/.config/xfce4/terminal/"
+mv -n "$HOME/.config/xfce4/terminal/terminalrc" "$HOME/.__backup/dotfiles/.config/xfce4/terminal/"
+ln -sf "${cwd}/.config/xfce4/terminal/terminalrc" "$HOME/.config/xfce4/terminal/terminalrc"
