@@ -171,3 +171,7 @@ bar {
 exec --no-startup-id xfce4-volumed
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
+exec synclient HorizTwoFingerScroll=2
+exec synclient VertTwoFingerScroll=2
+exec synclient TapButton1=0
+exec synclient TapButton2=0
