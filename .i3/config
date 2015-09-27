@@ -168,9 +168,16 @@ bar {
         status_command i3status
 }
 
+# xfce4 volume control
 exec --no-startup-id xfce4-volumed
+# xfce4 network manager, gives little wifi app on bottom bar
 exec --no-startup-id nm-applet
+# xfce power manager, allows for brightness control
 exec --no-startup-id xfce4-power-manager
+
+
+# touchpad settings Mac style scrolling, both horizontal and vertial
+# Also disable tap to click, and two finger tap to right click
 exec synclient HorizTwoFingerScroll=2
 exec synclient VertTwoFingerScroll=2
 exec synclient TapButton1=0
