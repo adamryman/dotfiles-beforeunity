@@ -178,11 +178,12 @@ exec --no-startup-id xfce4-power-manager
 
 # touchpad settings Mac style scrolling, both horizontal and vertial
 # Also disable tap to click, and two finger tap to right click
-exec synclient HorizTwoFingerScroll=1
-exec synclient VertTwoFingerScroll=1
-exec synclient HorizScrollDelta=-111
-exec synclient VertScrollDelta=-111
-exec synclient TapButton1=0
-exec synclient TapButton2=0
+exec --no-startup-id synclient VertTwoFingerScroll=1 HorizTwoFingerScroll=1
+exec --no-startup-id synclient VertScrollDelta=-111 HorizScrollDelta=-111
+exec --no-startup-id synclient TapButton1=0 TapButton2=0
+# PalmMinZ is the pressure where something is considered a palm. If a palm is detected then the mouse stops working. Therefor, if I want to click and drag then this number should be really high
+exec synclient PalmMinZ=252
+exec --no-startup-id synclient PalmMinWidth=2
 # Enable palm detection
-exec synclient PalmDetect=1
+exec --no-startup-id synclient PalmDetect=1m
+
