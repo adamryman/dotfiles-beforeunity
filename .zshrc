@@ -1,6 +1,9 @@
 # Source local files, like paths
 source ~/.local/before/.zshrc
 
+if { which evince $2> /dev/null };
+	then alias pdf=evince
+fi
 # Things to know about my zsh/oh-my-zsh
 # - Case insensitive by default
 # - Auto updates by default
@@ -103,6 +106,19 @@ gsc() {
 	lynx -dump 'https://www.google.com/search?q='$q | grep -e 'the original' | perl -nE 's/.*\]([^\.]+)\..*/$1/;print';
 }
 
+# http://stackoverflow.com/questions/6348387/how-to-quote-strings-in-file-names-in-zsh-passing-back-to-other-scripts
+# http://unix.stackexchange.com/questions/228501/expand-parameter-in-quotes-in-zsh
+# Command substitution is weird
+# somehow the "$(echo ${(qq)@)" is getting the arguments, in a quoted list
+# Then the emulate bash -c is able to break these apart but keep the quotes
+# Then the process gets disowned, a sleep happens for the window manager to catch up
+# then the terminal exits
+# swapping the terminal with the new application
+swap() {
+	swap_command="$(echo ${(qq)@})"
+	emulate bash -c "$swap_command" & disown; sleep 0.2; exit
+}
+
 # ssh to my server
 alias web="ssh adamryman@adamryman.com"
 
@@ -118,3 +134,5 @@ alias gogo="go run *.go"
 alias setJdk6='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)'
 alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
 alias setJdk8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
+
+export ambition="/home/adamryman/projects/go/src/github.com/adamryman/ambition"
