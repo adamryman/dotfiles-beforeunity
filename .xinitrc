@@ -12,6 +12,7 @@ setxkbmap -option caps:escape
 
 # more keyboard stuff in here
 xmodmap .Xmodmap
+xrdb -merge .Xresources
 
 # Default
 . /etc/X11/Xsession
