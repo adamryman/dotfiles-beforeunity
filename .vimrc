@@ -37,6 +37,10 @@ Plugin 'Raimondi/delimitMate'
 
 Plugin 'easymotion/vim-easymotion'
 
+Plugin 'scrooloose/nerdtree'
+
+Plugin 'rking/ag.vim'
+
 " Something wrong with python, see twonote
 "Plugin 'FredKSchott/CoVim'
 
@@ -183,3 +187,10 @@ map <leader>1 q2
 " sometimes to be suspended tty output
 " https://github.com/zaiste/vimified/issues/89
 " set shell=/usr/bin/zsh\ -i
+"
+
+" Go into command-line history rather than just command line
+" Allows to do j and k to navigate history
+nnoremap : q:i
+nnoremap / q/i
+nnoremap ? q?i
