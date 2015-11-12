@@ -1,4 +1,9 @@
 
+swap() {
+	echo "$@"
+	swap_command="$@"
+	"$swap_command" & disown; sleep 0.6; exit
+}
 # hub is a git wrapper that gives nice github commands
 if which hub; then
 	alias git=hub

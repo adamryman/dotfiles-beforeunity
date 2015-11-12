@@ -116,7 +116,7 @@ gsc() {
 # swapping the terminal with the new application
 swap() {
 	swap_command="$(echo ${(qq)@})"
-	emulate bash -c "$swap_command" & disown; sleep 0.2; exit
+	emulate bash -c "$swap_command" & disown; sleep 0.6; exit
 }
 
 # ssh to my server
