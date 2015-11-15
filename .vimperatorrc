@@ -21,6 +21,18 @@ set focuscontent
 " Private browsing mode
 map E :emenu File.New Private Window<Return>
 
+
+
+" ### LEADER ###
+" In vimperator, space is not normally mappable, I figured out how to change it
+" and documented it here https://github.com/vimperator/vimperator-labs/issues/10
+let mapleader="\"
+map <space> <leader>
+
+"Remove search highlighting quickly
+map <leader>/ :nohlsearch<Return>
+
+
 " ##### FULL SCREEN HIDING #####
 " Taken from here https://github.com/vimperator/vimperator-labs/issues/26#issuecomment-73982996"
 
