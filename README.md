@@ -22,6 +22,10 @@ For base linux agetty to change caps lock to escape you edit `/etc/default/keybo
 XKBOPTIONS="caps:escape"
 ```
 
+### Vimperator mapping space to leader
+
+https://github.com/vimperator/vimperator-labs/issues/10
+
 ### TODO
 
 - Add local things to sym linking script
