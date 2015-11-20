@@ -26,8 +26,8 @@ export PATH=$PATH:/usr/local/go/bin
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=100000
+HISTFILESIZE=200000
 
 
 # set a fancy prompt (non-color, unless we know we "want" color)
@@ -68,9 +68,9 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-#alias ll='ls -l'
-#alias la='ls -A'
-#alias l='ls -CF'
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
