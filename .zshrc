@@ -1,5 +1,6 @@
 # Source local files, like paths
 source ~/.local/before/.zshrc
+alias less='less -r'
 
 if { which evince $2> /dev/null };
 	then alias pdf=evince
@@ -87,6 +88,9 @@ alias reso="source ~/.zshrc"
 # Adding for editing zshrc quickly
 alias zshrc="vim ~/.zshrc"
 
+# Color match for ag
+alias ag="ag --color-match 91"
+
 # VI MODE
 # bindkey -v
 
@@ -136,3 +140,16 @@ alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
 alias setJdk8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
 
 export ambition="/home/adamryman/projects/go/src/github.com/adamryman/ambition"
+
+searchcmd() {
+	query="$@"
+	cat .zsh_history | ag $query
+}
+
+currentpermissions() {
+	stat -c "%a %n" $@
+}
+
+
+export NVM_DIR="/home/adamryman/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
