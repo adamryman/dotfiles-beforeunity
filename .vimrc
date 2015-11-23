@@ -189,11 +189,14 @@ map <leader>1 q2
 " set shell=/usr/bin/zsh\ -i
 "
 
+" Cannot record macro while using the below
 " Go into command-line history rather than just command line
 " Allows to do j and k to navigate history
 nnoremap : q:i
 nnoremap / q/i
-nnoremap ? q?i
+nnoremap ? /
+
+
 
 " Setting default yank to also go to the + register, which is the system
 " clipboard. Not sure why clipboard=unnamed does not work (which would be the
@@ -201,3 +204,6 @@ nnoremap ? q?i
 " This allows for yy to go to the clipboard, which is what I want for now. the
 " whole <leader>' was getting pretty annoying to be honest
 set clipboard=unnamedplus
+
+" Do a string replacement of current visual selection
+map <leader>/ yq:i%s/<Esc>pa/
