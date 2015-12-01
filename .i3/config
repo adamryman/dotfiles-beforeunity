@@ -44,6 +44,14 @@ bindsym Mod1+backslash exec firefox
 # kill focused window
 bindsym Mod1+Shift+q kill
 
+# Screenshots, make me feel like mac again
+bindsym Control+Shift+3 exec scrot
+# Why does this one not work?
+bindsym Control+Shift+4 exec scrot -s
+
+# Move workspace to the left, will wrap around
+bindsym Mod1+m move workspace to output left
+
 # start dmenu (a program launcher)
 bindsym Mod1+space exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
