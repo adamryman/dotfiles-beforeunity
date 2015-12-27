@@ -207,3 +207,10 @@ set clipboard=unnamedplus
 
 " Do a string replacement of current visual selection
 map <leader>/ yq:i%s/<Esc>pa/
+
+" Ag settings
+" LAg uses the location list
+let g:ag_highlight=1
+map <leader>n :LAg<Space>
+"hi Search
+":hi
