@@ -9,8 +9,7 @@
 # layout, use the i3-config-wizard
 #
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
+# Font for window titles. Will also be used by the bar unless a different font # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 font pango:DejaVu Sans Mono 8
@@ -23,6 +22,8 @@ font pango:DejaVu Sans Mono 8
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
+#
+
 
 set $up k
 set $down j
@@ -33,7 +34,9 @@ set $right l
 floating_modifier Mod1
 
 # start a terminal
-bindsym Mod1+Return exec urxvt
+# bindsym Mod1+Return exec urxvt
+bindsym Mod1+Return exec i3-sensible-terminal
+
 
 # start a terminal from the same path as the current terminal
 bindsym Mod1+Shift+Return exec $HOME/.fromhere.sh
@@ -171,12 +174,8 @@ bar {
         status_command i3status
 }
 
-# xfce4 volume control
-exec --no-startup-id xfce4-volumed
 # xfce4 network manager, gives little wifi app on bottom bar
 exec --no-startup-id nm-applet
-# xfce power manager, allows for brightness control
-exec --no-startup-id xfce4-power-manager
 
 
 # touchpad settings Mac style scrolling, both horizontal and vertial
@@ -190,3 +189,9 @@ exec --no-startup-id synclient PalmMinWidth=2
 # Enable palm detection
 exec --no-startup-id synclient PalmDetect=1m
 
+# Set Background image
+exec --no-startup-id feh --bg-fill $HOME/.i3/tree.jpg
+
+exec --no-startup-id xbindkeys
+
+exec --no-startup-id dunst

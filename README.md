@@ -14,12 +14,12 @@ chmod a+x setup.sh
 
 Inspiration taken from [zaqthefreshman/dotfiles](https://github.com/zaqthefreshman/dotfiles)
 
-### Change caps lock to Esc
+### Change caps lock to Ctrl
 
 For base linux agetty to change caps lock to escape you edit `/etc/default/keyboard` and change
 
 ```
-XKBOPTIONS="caps:escape"
+XKBOPTIONS="ctrl:nocaps"
 ```
 
 ### Vimperator mapping space to leader

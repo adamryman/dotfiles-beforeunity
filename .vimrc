@@ -15,7 +15,7 @@ Plugin 'gmarik/Vundle.vim'
 
 
 " Need to add comments for each of these
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'fatih/vim-go'
 
@@ -207,3 +207,8 @@ set clipboard=unnamedplus
 
 " Do a string replacement of current visual selection
 map <leader>/ yq:i%s/<Esc>pa/
+
+" For some reason backspace was not backspacing text that was already written
+" before that insert mode this fixed it
+" http://stackoverflow.com/a/5019353
+set backspace=indent,eol,start
