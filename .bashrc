@@ -17,8 +17,11 @@ google() {
 }
 
 # add this path to the path variable so that we can access go bins from any directory
+export projects=~/projects
+export GOPATH=$projects/go
+export GOROOT=/usr/local/go
 PATH=/usr/bin:/bin:/usr/sbin:/sbin
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 
 
 # append to the history file, don't overwrite it
@@ -96,3 +99,5 @@ gsc() {
 	q=$1;
 	lynx -dump https://www.google.com/search?q=$q | grep -e 'the original' | perl -nE 's/.*\]([^\.]+)\..*/$1/;print';
 	}
+
+eval `keychain --eval --agents ssh id_rsa`

@@ -15,7 +15,7 @@ Plugin 'gmarik/Vundle.vim'
 
 
 " Need to add comments for each of these
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'fatih/vim-go'
 
@@ -214,3 +214,10 @@ let g:ag_highlight=1
 map <leader>n :LAg<Space>
 "hi Search
 ":hi
+
+" For some reason backspace was not backspacing text that was already written
+" before that instance of insert mode
+" this fixed it.
+" Effected Asus ux305la with xubuntu
+" http://stackoverflow.com/a/5019353
+set backspace=indent,eol,start
