@@ -56,6 +56,9 @@ ln -sf "${cwd}/.oh-my-zsh/plugins/vi-mode/vi-mode.plugin.zsh" "$HOME/.oh-my-zsh/
 mv -n "$HOME/.i3" "$HOME/.__backup/dotfiles/"
 ln -sfn "${cwd}/.i3/" "$HOME/"
 
+# Script for screenshots, must have dropbox setup and scrot installed
+ln -sf "${cwd}/.scrotbox.sh" "$HOME/.scrotbox.sh"
+
 # These are for changing the keyboard on a mac for debian. These will
 # eventually only be in a specific branch
 # Makes command key into control key

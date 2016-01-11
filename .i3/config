@@ -49,8 +49,9 @@ bindsym Mod1+Shift+q kill
 
 # Screenshots, make me feel like mac again
 bindsym Control+Shift+3 exec scrot
-# Why does this one not work?
-bindsym Control+Shift+4 exec scrot -s
+# --release gives up control to the launched program
+# runs a shellscript that allows me to take a selectable screenshot and then upload to dropbox and put a link in my clipboard
+bindsym --release Control+Shift+4 exec $HOME/.scrotbox.sh
 
 # Move workspace to the left, will wrap around
 bindsym Mod1+m move workspace to output left
