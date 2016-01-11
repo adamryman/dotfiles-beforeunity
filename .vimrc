@@ -15,7 +15,7 @@ Plugin 'gmarik/Vundle.vim'
 
 
 " Need to add comments for each of these
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'fatih/vim-go'
 
@@ -41,6 +41,7 @@ Plugin 'scrooloose/nerdtree'
 
 Plugin 'rking/ag.vim'
 
+Plugin 'zaqthefreshman/notehub-vim'
 " Something wrong with python, see twonote
 "Plugin 'FredKSchott/CoVim'
 
@@ -221,3 +222,8 @@ map <leader>n :LAg<Space>
 " Effected Asus ux305la with xubuntu
 " http://stackoverflow.com/a/5019353
 set backspace=indent,eol,start
+
+
+" sudo save
+" http://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work
+map <leader>! :w !sudo tee %<enter>
