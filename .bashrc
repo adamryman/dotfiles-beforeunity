@@ -4,7 +4,7 @@ export projects=~/projects
 export GOPATH=$projects/go
 export GOROOT=/usr/local/go
 
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=/usr/bin:/usr/local/bin:/bin:/usr/sbin:/sbin
 export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 
 # Custom bins export
