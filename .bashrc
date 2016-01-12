@@ -7,7 +7,9 @@ export GOROOT=/usr/local/go
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin
 export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 
-# Custom bins export PATH=$PATH:$HOME/bin
+# Custom bins export
+PATH=$PATH:$HOME/bin
+
 # This loads nvm
 export NVM_DIR="/home/adamryman/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
