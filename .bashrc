@@ -20,14 +20,14 @@ fi
 # Custom Functions
 
 # search google with w3m
-google() {
+function google() {
         IFS="+"
         export query="$@"
         w3m http://google.com/search?q="$query"
 }
 
 # swap a program in with the current terminal in i3
-swap() {
+function swap() {
 	echo "$@"
 	swap_command="$@"
 	"$swap_command" & disown; sleep 0.6; exit
