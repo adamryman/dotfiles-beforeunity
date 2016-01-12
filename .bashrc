@@ -1,13 +1,23 @@
+# add this path to the path variable so that we can access go bins from any directory
+export projects=~/projects
 
-swap() {
-	echo "$@"
-	swap_command="$@"
-	"$swap_command" & disown; sleep 0.6; exit
-}
+export GOPATH=$projects/go
+export GOROOT=/usr/local/go
+
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+
+# Custom bins export PATH=$PATH:$HOME/bin
+# This loads nvm
+export NVM_DIR="/home/adamryman/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
 # hub is a git wrapper that gives nice github commands
-if which hub; then
+if which hub > /dev/null; then
 	alias git=hub
 fi
+
+# Custom Functions
 
 # search google with w3m
 google() {
@@ -16,13 +26,12 @@ google() {
         w3m http://google.com/search?q="$query"
 }
 
-# add this path to the path variable so that we can access go bins from any directory
-export projects=~/projects
-export GOPATH=$projects/go
-export GOROOT=/usr/local/go
-PATH=/usr/bin:/bin:/usr/sbin:/sbin
-export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
-
+# swap a program in with the current terminal in i3
+swap() {
+	echo "$@"
+	swap_command="$@"
+	"$swap_command" & disown; sleep 0.6; exit
+}
 
 # append to the history file, don't overwrite it
 # The history file is normally in memory until shell closes
@@ -32,12 +41,10 @@ shopt -s histappend
 HISTSIZE=100000
 HISTFILESIZE=200000
 
-
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
     xterm-color) color_prompt=yes;;
 esac
-
 
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
@@ -95,9 +102,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
-gsc() {
-	q=$1;
-	lynx -dump https://www.google.com/search?q=$q | grep -e 'the original' | perl -nE 's/.*\]([^\.]+)\..*/$1/;print';
-	}
 
-eval `keychain --eval --agents ssh id_rsa`
+eval `keychain --quiet --eval --agents ssh id_rsa`
