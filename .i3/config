@@ -194,6 +194,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id synclient VertTwoFingerScroll=1 HorizTwoFingerScroll=1
 exec --no-startup-id synclient VertScrollDelta=-111 HorizScrollDelta=-111
 exec --no-startup-id synclient TapButton1=0 TapButton2=0
+exec --no-startup-id synclient VertEdgeScroll=0
 # PalmMinZ is the pressure where something is considered a palm. If a palm is detected then the mouse stops working. Therefor, if I want to click and drag then this number should be really high
 exec synclient PalmMinZ=252
 exec --no-startup-id synclient PalmMinWidth=2
