@@ -59,6 +59,9 @@ ln -sfn "${cwd}/.i3/" "$HOME/"
 # Script for screenshots, must have dropbox setup and scrot installed
 ln -sf "${cwd}/.scrotbox.sh" "$HOME/.scrotbox.sh"
 
+# Script for launch urxvt from the same place as the current terminal
+ln -sf "${cwd}/.fromhere.sh" "$HOME/.fromhere.sh"
+
 # These are for changing the keyboard on a mac for debian. These will
 # eventually only be in a specific branch
 # Makes command key into control key
@@ -66,6 +69,9 @@ ln -sf "${cwd}/.scrotbox.sh" "$HOME/.scrotbox.sh"
 # terminator config
 ln -sf "${cwd}/.xinitrc" "$HOME/.xinitrc"
 ln -sf "${cwd}/.Xmodmap" "$HOME/.Xmodmap"
+
+# Mostly urxvt config
+ln -sf "${cwd}/.Xresources" "$HOME/.Xresources"
 
 # terminator config
 mv -n "$HOME/.config/terminator" "$HOME/.__backup/dotfiles/"
