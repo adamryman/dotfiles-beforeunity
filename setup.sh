@@ -6,9 +6,6 @@ cwd=$(pwd)
 
 git submodule update --init --recursive
 
-# Backup for old things
-mkdir -p "$HOME/.__backup/dotfiles/"
-
 # Path stuff
 cp -rn "${cwd}/.local" "$HOME"
 mkdir -p "$HOME/.config"
@@ -20,17 +17,14 @@ ln -sf "${cwd}/.vimrc" "$HOME/.vimrc"
 
 # Filetype specific things for vim
 mkdir -p "$HOME/.vim/"
-mv -n "$HOME/.vim/ftplugin" "$HOME/.__backup/dotfiles/"
 ln -sfn "${cwd}/.vim/ftplugin/" "$HOME/.vim/"
 
 # Personal vim help file
 mkdir -p "$HOME/.vim/"
-mv -n "$HOME/.vim/helpfiles" "$HOME/.__backup/dotfiles/"
 ln -sfn "${cwd}/.vim/helpfiles/" "$HOME/.vim/"
 
 # Vundle, used to install all my plugins
 mkdir -p "$HOME/.vim/bundle/"
-mv -n "$HOME/.vim/bundle/Vundle.vim" "$HOME/.__backup/dotfiles/Vundle.vim"
 ln -sfn "${cwd}/.vim/bundle/Vundle.vim" "$HOME/.vim/bundle/"
 
 # vimperator is a firefox extension that is awesome.
@@ -45,16 +39,13 @@ ln -sf "${cwd}/.bashrc" "$HOME/.bashrc"
 # should just customize bash instead
 ln -sf "${cwd}/.zshrc" "$HOME/.zshrc"
 
-mv -n "$HOME/.zsh" "$HOME/.__backup/dotfiles/"
 ln -sfn "${cwd}/.zsh/" "$HOME/"
 
-mkdir -p "$HOME/.__backup/dotfiles/plugins/vi-mode/"
-mv -n "$HOME/.oh-my-zsh/plugins/vi-mode/vi-mode.plugin.zsh" "$HOME/.__backup/dotfiles/plugins/vi-mode/"
-ln -sf "${cwd}/.oh-my-zsh/plugins/vi-mode/vi-mode.plugin.zsh" "$HOME/.oh-my-zsh/plugins/vi-mode/vi-mode.plugin.zsh"
+mkdir -p "$HOME/.oh-my-zsh/plugins/vi-mode/"
+ln -sfn "${cwd}/.oh-my-zsh/plugins/vi-mode/vi-mode.plugin.zsh" "$HOME/.oh-my-zsh/plugins/vi-mode/vi-mode.plugin.zsh"
 
 # Window manager configuration and plugins
-mv -n "$HOME/.i3" "$HOME/.__backup/dotfiles/"
-ln -sfn "${cwd}/.i3/" "$HOME/"
+ln -sfn "${cwd}/.i3/" "$HOME/.config/i3"
 
 # Script for screenshots, must have dropbox setup and scrot installed
 ln -sf "${cwd}/.scrotbox.sh" "$HOME/.scrotbox.sh"
@@ -74,23 +65,18 @@ ln -sf "${cwd}/.Xmodmap" "$HOME/.Xmodmap"
 ln -sf "${cwd}/.Xresources" "$HOME/.Xresources"
 
 # terminator config
-mv -n "$HOME/.config/terminator" "$HOME/.__backup/dotfiles/"
 ln -sfn "${cwd}/.config/terminator" "$HOME/.config/terminator"
 
 # fonts config
 # I don't know what this config does exactly, but my fonts look way better
 # Might want to copy ubuntu / xubuntu's version of this file
-mv -n "$HOME/.config/fontconfig" "$HOME/.__backup/dotfiles/.config"
 ln -sfn "${cwd}/.config/fontconfig" "$HOME/.config/fontconfig"
 
 # w3m config - terminal web browser
 # pretty cool, might have sold me on emacs
 mkdir -p $HOME/.w3m
-mv -n "$HOME/.w3m/keymap" "$HOME/.__backup/dotfiles/.w3m/"
 ln -sf "${cwd}/.w3m/keymap" "$HOME/.w3m/keymap"
 
 # xfce4-terminal seems good enough
 mkdir -p "$HOME/.config/xfce4/terminal"
-mkdir -p "$HOME/.__backup/dotfiles/.config/xfce4/terminal/"
-mv -n "$HOME/.config/xfce4/terminal/terminalrc" "$HOME/.__backup/dotfiles/.config/xfce4/terminal/"
 ln -sf "${cwd}/.config/xfce4/terminal/terminalrc" "$HOME/.config/xfce4/terminal/terminalrc"
