@@ -16,6 +16,9 @@ function! OpenInFirefox()
 	redraw!
 endfunction
 
+command! Render call RenderMarkdown()
+command! Open call OpenInFirefox()
+
 " For opening the render in firefox and rerendering it
 "map <leader><leader>j :call RenderMarkdown()<enter>
 "map <leader><leader>f :call OpenInFirefox()<enter>
