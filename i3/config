@@ -7,7 +7,6 @@
 #
 # To get a config file with the same key positions, but for your current
 # layout, use the i3-config-wizard
-#
 
 # Font for window titles. Will also be used by the bar unless a different font # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -22,8 +21,6 @@ font pango:DejaVu Sans Mono 8
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
-#
-
 
 set $up k
 set $down j
@@ -39,7 +36,7 @@ floating_modifier Mod1
 
 
 # start a terminal from the same path as the current terminal
-bindsym Mod1+Shift+Return exec $HOME/.fromhere.sh
+bindsym Mod1+Shift+Return exec $HOME/.config/dotfile_scripts/fromhere.sh
 
 # start firefox
 bindsym Mod1+backslash exec firefox
@@ -51,9 +48,9 @@ bindsym Mod1+Shift+q kill
 bindsym Control+Shift+3 exec scrot
 # --release gives up control to the launched program
 # runs a shellscript that allows me to take a selectable screenshot and then upload to dropbox and put a link in my clipboard
-bindsym --release Control+Shift+4 exec $HOME/.scrotbox.sh
+bindsym --release Control+Shift+4 exec $HOME/.config/dotfile_scripts/scrotbox.sh
 
-bindsym Mod1+Control+c exec $HOME/.gsc.sh
+bindsym --release Mod1+b exec $HOME/.config/dotfile_scripts/gsc.sh
 
 # Move workspace to the left, will wrap around
 bindsym Mod1+m move workspace to output left

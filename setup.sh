@@ -45,13 +45,19 @@ mkdir -p "$HOME/.oh-my-zsh/plugins/vi-mode/"
 ln -sfn "${cwd}/.oh-my-zsh/plugins/vi-mode/vi-mode.plugin.zsh" "$HOME/.oh-my-zsh/plugins/vi-mode/vi-mode.plugin.zsh"
 
 # Window manager configuration and plugins
-ln -sfn "${cwd}/.i3/" "$HOME/.config/i3"
+ln -sfn "${cwd}/i3/" "$HOME/.config/i3"
+
+# Folder for custom scripts
+mkdir -p "$HOME/.config/dotfile_scripts/"
 
 # Script for screenshots, must have dropbox setup and scrot installed
-ln -sf "${cwd}/.scrotbox.sh" "$HOME/.scrotbox.sh"
+ln -sf "${cwd}/scrotbox.sh" "$HOME/.config/dotfile_scripts/scrotbox.sh"
 
-# Script for launch urxvt from the same place as the current terminal
-ln -sf "${cwd}/.fromhere.sh" "$HOME/.fromhere.sh"
+# Script for launching urxvt from the same place as the current terminal
+ln -sfn "${cwd}/fromhere.sh" "$HOME/.config/dotfile_scripts/fromhere.sh"
+
+# Script for google spell checking what is currently in my clipboard
+ln -sfn "${cwd}/gsc" "$HOME/.config/dotfile_scripts/gsc.sh"
 
 # These are for changing the keyboard on a mac for debian. These will
 # eventually only be in a specific branch
