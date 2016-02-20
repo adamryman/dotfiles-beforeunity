@@ -57,7 +57,7 @@ ln -sf "${cwd}/scrotbox.sh" "$HOME/.config/dotfile_scripts/scrotbox.sh"
 ln -sfn "${cwd}/fromhere.sh" "$HOME/.config/dotfile_scripts/fromhere.sh"
 
 # Script for google spell checking what is currently in my clipboard
-ln -sfn "${cwd}/gsc" "$HOME/.config/dotfile_scripts/gsc.sh"
+ln -sfn "${cwd}/gsc.sh" "$HOME/.config/dotfile_scripts/gsc.sh"
 
 # These are for changing the keyboard on a mac for debian. These will
 # eventually only be in a specific branch
