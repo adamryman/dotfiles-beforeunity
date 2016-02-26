@@ -6,7 +6,6 @@ You must give setup.sh execute privileges in order to run them.
 
 This will create a bunch of sym links from where these dotfiles usually live to this repo
 
-CURRENTLY DOES NOT BACK UP EVERYTHING, READ THE CODE BEFORE RUNNING IT.
 
 ```shell
 chmod a+x setup.sh

@@ -82,6 +82,9 @@ cur_repo="\[$red\]\$(get_repo_name)\[$reset\]"
 line_join="\[$yellow\]@\[$reset\]"
 export PS1="$user$line_join$host\n$path $cur_branch $cur_repo\n$ "
 
+# Bash file path completion
+[[ $- = *i* ]] && bind TAB:menu-complete
+
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)

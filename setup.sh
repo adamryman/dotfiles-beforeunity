@@ -2,6 +2,10 @@
 
 # Sym linking dotfiles. Need to add stuff for local files
 
+
+# Change the default login shell to bash
+sudo chsh -s $(which bash) $(echo $USER)
+
 cwd=$(pwd)
 
 git submodule update --init --recursive
