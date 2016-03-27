@@ -187,16 +187,16 @@ exec --no-startup-id nm-applet
 
 
 # touchpad settings Mac style scrolling, both horizontal and vertial
-# Also disable tap to click, and two finger tap to right click
+# also remove scroll on the edge
 exec --no-startup-id synclient VertTwoFingerScroll=1 HorizTwoFingerScroll=1
 exec --no-startup-id synclient VertScrollDelta=-111 HorizScrollDelta=-111
-exec --no-startup-id synclient TapButton1=0 TapButton2=0
 exec --no-startup-id synclient VertEdgeScroll=0
-# PalmMinZ is the pressure where something is considered a palm. If a palm is detected then the mouse stops working. Therefor, if I want to click and drag then this number should be really high
-exec synclient PalmMinZ=252
-exec --no-startup-id synclient PalmMinWidth=2
-# Enable palm detection
-exec --no-startup-id synclient PalmDetect=1m
+
+
+exec --no-startup-id synclient AreaLeftEdge=600
+exec --no-startup-id synclient AreaRightEdge=2400
+
+
 
 # Set Background image
 exec --no-startup-id feh --bg-fill $HOME/.config/i3/tree.jpg
@@ -206,3 +206,5 @@ exec --no-startup-id xbindkeys
 exec --no-startup-id dunst
 
 exec --no-startup-id dropboxd
+
+exec --no-startup-id redshift
