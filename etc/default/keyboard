@@ -8,7 +8,7 @@
 XKBMODEL="pc105"
 XKBLAYOUT="us"
 XKBVARIANT=""
-XKBOPTIONS="ctrl:nocaps,altwin:ctrl_win"
+XKBOPTIONS="ctrl:nocaps,altwin:alt_win"
 
 # If you don't want to use the XKB layout on the console, you can
 # specify an alternative keymap.  Make sure it will be accessible
