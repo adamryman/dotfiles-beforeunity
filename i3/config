@@ -34,9 +34,8 @@ floating_modifier Mod1
  bindsym Mod1+Return exec urxvt
 #bindsym Mod1+Return exec i3-sensible-terminal
 
-
 # start a terminal from the same path as the current terminal
-bindsym Mod1+Shift+Return exec $HOME/.config/dotfile_scripts/fromhere.sh
+bindsym Mod1+Shift+Return exec urxvt -cd "`xcwd`"
 
 # start firefox
 bindsym Mod1+backslash exec firefox
