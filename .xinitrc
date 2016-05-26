@@ -13,6 +13,7 @@
 # more keyboard stuff in here
 xmodmap .Xmodmap
 xrdb -merge .Xresources
+xset r rate 250 50
 
 # Default
 . /etc/X11/Xsession
