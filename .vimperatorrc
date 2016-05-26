@@ -14,6 +14,7 @@ map K :tabnext<Return>
 map s :tabopen google<space>
 
 set gui=none
+set gui=tabs
 
 " Try to stay in normal mode after loading a web page
 set focuscontent
