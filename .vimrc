@@ -11,9 +11,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-" Other vim packages managed by Vundle
-
-
 " Need to add comments for each of these
 Plugin 'Valloric/YouCompleteMe'
 
@@ -27,26 +24,15 @@ Plugin 'mattn/emmet-vim'
 
 Plugin 'godlygeek/tabular'
 
-Plugin 'adamryman/twonote-vim'
-
-Plugin 'marijnh/tern_for_vim'
-
 Plugin 'tpope/vim-surround'
 
 Plugin 'Raimondi/delimitMate'
 
-Plugin 'easymotion/vim-easymotion'
-
-Plugin 'scrooloose/nerdtree'
-
-Plugin 'rking/ag.vim'
-
-Plugin 'zaqthefreshman/notehub-vim'
-" Something wrong with python, see twonote
-"Plugin 'FredKSchott/CoVim'
-
 "Silly
 Plugin 'natw/keyboard_cat.vim'
+
+" Commenting made easy!
+Plugin 'scrooloose/nerdcommenter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
