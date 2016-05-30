@@ -19,7 +19,7 @@ git clone http://github.com/adamryman/dotfiles .
 
 ```
 // Do this carefully
-sudo cp -R etc /
+sudo cp -R ~/dotfiles/_to_root/etc /
 ```
 
 3. urxvt
@@ -29,7 +29,7 @@ sudo apt-get rxvt-unicode-256color xfonts-terminus xsel
 
 // Copy urxvt setting files
 // Do this carefully
-sudo cp -R usr /
+sudo cp -R ~/dotfiles/_to_root/usr /
 ```
 
 4. vim - from source [Follow this guide](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source)
