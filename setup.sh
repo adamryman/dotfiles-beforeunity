@@ -57,9 +57,6 @@ mkdir -p "$HOME/.config/dotfile_scripts/"
 # Script for screenshots, must have dropbox setup and scrot installed
 ln -sf "${cwd}/scrotbox.sh" "$HOME/.config/dotfile_scripts/scrotbox.sh"
 
-# Script for launching urxvt from the same place as the current terminal
-ln -sfn "${cwd}/fromhere.sh" "$HOME/.config/dotfile_scripts/fromhere.sh"
-
 # Script for google spell checking what is currently in my clipboard
 ln -sfn "${cwd}/gsc.sh" "$HOME/.config/dotfile_scripts/gsc.sh"
 
