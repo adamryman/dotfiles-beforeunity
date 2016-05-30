@@ -49,7 +49,7 @@ mkdir -p "$HOME/.oh-my-zsh/plugins/vi-mode/"
 ln -sfn "${cwd}/.oh-my-zsh/plugins/vi-mode/vi-mode.plugin.zsh" "$HOME/.oh-my-zsh/plugins/vi-mode/vi-mode.plugin.zsh"
 
 # Window manager configuration and plugins
-ln -sfn "${cwd}/i3/" "$HOME/.config/"
+ln -sfn "${cwd}/.config/i3/" "$HOME/.config/i3"
 
 # Folder for custom scripts
 mkdir -p "$HOME/.config/dotfile_scripts/"
