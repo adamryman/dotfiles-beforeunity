@@ -168,23 +168,6 @@ map <leader>h :sp $HOME/.vim/helpfiles/new-commands.md<enter>zRG
 map <leader>2 @2
 map <leader>1 q2
 
-" Set shell to be zsh interactive, I was having a problem where I could not
-" use my zsh functions and aliases from vim, but this fixes it
-" UPDATE This broke vim further, when external commands were ran, vim
-" sometimes to be suspended tty output
-" https://github.com/zaiste/vimified/issues/89
-" set shell=/usr/bin/zsh\ -i
-"
-
-" Cannot record macro while using the below
-" Go into command-line history rather than just command line
-" Allows to do j and k to navigate history
-nnoremap : q:i
-nnoremap / q/i
-nnoremap ? /
-
-
-
 " Setting default yank to also go to the + register, which is the system
 " clipboard. Not sure why clipboard=unnamed does not work (which would be the
 " * register)
