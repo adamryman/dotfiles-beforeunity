@@ -1,0 +1,6 @@
+## Bash up arrow search completion
+## http://askubuntu.com/questions/59846/bash-history-search-partial-up-arrow
+## arrow up
+"\e[A":history-search-backward
+## arrow down
+"\e[B":history-search-forward

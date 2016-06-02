@@ -38,6 +38,9 @@ ln -sf "${cwd}/.vimperatorrc" "$HOME/.vimperatorrc"
 # bashrc. This needs some work.
 ln -sf "${cwd}/.bashrc" "$HOME/.bashrc"
 
+# Bash up arrow search completion
+ln -sf "${cwd}/.inputrc" "$HOME/.inputrc"
+
 # Right now I am using zsh with oh-my-zsh, may cut this down at some point to
 # something I can fully understand. Also bash is more portable so maybe I
 # should just customize bash instead
@@ -70,6 +73,7 @@ ln -sf "${cwd}/.Xmodmap" "$HOME/.Xmodmap"
 
 # Mostly urxvt config
 ln -sf "${cwd}/.Xresources" "$HOME/.Xresources"
+
 
 # terminator config
 ln -sfn "${cwd}/.config/terminator" "$HOME/.config/terminator"
