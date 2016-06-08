@@ -1,12 +1,19 @@
-# add this path to the path variable so that we can access go bins from any directory
+
+# Basic path
+export PATH=/usr/bin:/usr/local/bin:/bin:/usr/sbin:/sbin
+
+# Pip is putting things here
+export PATH=$PATH:$HOME/.local/bin
+
 export projects=~/projects
 
+# GOOOOOOOO
 export GOPATH=$projects/go
 export GOBIN=$GOPATH/bin
 export GOROOT=/usr/local/go
 export GOCODE=$GOPATH/src
 
-export PATH=/usr/bin:/usr/local/bin:/bin:/usr/sbin:/sbin
+# Add go bins to path
 export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 
 # Custom bins export
@@ -51,6 +58,7 @@ case "$TERM" in
 esac
 
 # Defining colors for prompt
+# Leland Batey's
 bold='\e[1;39m'
 orange='\e[38;5;208m'
 red='\e[0;31m'
@@ -62,13 +70,35 @@ cyan='\e[0;36m'
 purple='\e[0;35m'
 reset='\e[0m'
 
+# My Colors
+# to list possible colors
+# for C in {0..255}; do  tput setab $C;  echo -n "$C "; done
+
+# color = "\e[38;5;XXXm
+# where XXX is the color code
+# http://misc.flogisoft.com/bash/tip_colors_and_formatting
+#light_red='\e[38;5;161m'
+#light_blue='\e[38;5;81m'
+#light_green='\e[38;5;118m'
+#light_orange='\e[38;5;202m'
+
 # Functions in bash don't seem to really "return" anything. The only way to get
 # a message out of them is to have them print data, then to capture that data
 # via command substitution. That is what we do here.
+function get_git_top_path {
+	top_path=$(git rev-parse --show-toplevel 2> /dev/null) || return
+	echo $top_path
+}
+
+function top {
+	echo $(get_git_top_path)
+}
+
 function get_repo_name {
 	repo=$(basename $(git rev-parse --show-toplevel 2> /dev/null) 2> /dev/null) || return
 	echo "("$repo")"
 }
+
 function get_git_branch {
 	ref=$(git symbolic-ref HEAD 2> /dev/null) || return
 	echo ""
@@ -85,6 +115,12 @@ export PS1="$user$line_join$host\n$path $cur_branch $cur_repo\n$ "
 
 # Bash file path completion
 [[ $- = *i* ]] && bind TAB:menu-complete
+
+# ssh keychain
+eval `keychain --quiet --eval --agents ssh id_rsa`
+
+
+### VVVV DEFAULTS I NEED TO UNDERSTAND VVVV ###
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
@@ -136,4 +172,3 @@ if ! shopt -oq posix; then
 fi
 
 
-eval `keychain --quiet --eval --agents ssh id_rsa`
