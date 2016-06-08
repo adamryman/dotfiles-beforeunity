@@ -196,3 +196,5 @@ set backspace=indent,eol,start
 " sudo save
 " http://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work
 map <leader>! :w !sudo tee %<enter>
+
+map <leader>cd <plug>NERDCommenterToggle
