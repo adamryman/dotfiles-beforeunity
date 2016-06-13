@@ -72,14 +72,17 @@ reset='\e[0m'
 
 # My Colors
 # to list possible colors
-# for C in {0..255}; do  tput setab $C;  echo -n "$C "; done
+function all_colors {
+	for C in {0..255}; do  tput setab $C;  echo -n "$C "; done
+	echo
+}
 
 # color = "\e[38;5;XXXm
 # where XXX is the color code
 # http://misc.flogisoft.com/bash/tip_colors_and_formatting
 #light_red='\e[38;5;161m'
 #light_blue='\e[38;5;81m'
-#light_green='\e[38;5;118m'
+light_green='\e[38;5;118m'
 #light_orange='\e[38;5;202m'
 
 # Functions in bash don't seem to really "return" anything. The only way to get
@@ -90,9 +93,10 @@ function get_git_top_path {
 	echo $top_path
 }
 
-function top {
+function git-top {
 	echo $(get_git_top_path)
 }
+
 
 function get_repo_name {
 	repo=$(basename $(git rev-parse --show-toplevel 2> /dev/null) 2> /dev/null) || return
@@ -105,19 +109,31 @@ function get_git_branch {
 	echo "("${ref#refs/heads/}")"
 }
 
+
 user="\[$cyan\]\u\[$reset\]"
 host="\[$purple\]\h\[$reset\]"
-path="\[$green\]\w\[$reset\]"
+#path="\[$green\]\w\[$reset\]"
+path="\[$light_green\]\W\[$reset\] \[$green\]\w\[$reset\]"
 cur_branch="\[$bright_green\]\$(get_git_branch)\[$reset\]"
 cur_repo="\[$red\]\$(get_repo_name)\[$reset\]"
 line_join="\[$yellow\]@\[$reset\]"
 export PS1="$user$line_join$host\n$path $cur_branch $cur_repo\n$ "
 
+# bash vim mode
+set -o vi
+
 # Bash file path completion
-[[ $- = *i* ]] && bind TAB:menu-complete
+# http://unix.stackexchange.com/questions/55203/bash-autocomplete-first-list-files-then-cycle-through-them
+ [[ $- = *i* ]] && bind "C-TAB:menu-complete"
+#bind TAB:menu-complete
+bind '"\e[Z":menu-complete-backward'
+#bind '"TAB":menu-complete-backward'
+#bind "set show-all-if-ambiguous on"
+#bind "set menu-complete-display-prefix on"
 
 # ssh keychain
 eval `keychain --quiet --eval --agents ssh id_rsa`
+
 
 
 ### VVVV DEFAULTS I NEED TO UNDERSTAND VVVV ###
