@@ -198,3 +198,6 @@ set backspace=indent,eol,start
 map <leader>! :w !sudo tee %<enter>
 
 map <leader>cd <plug>NERDCommenterToggle
+
+map <leader>g :set cursorline!<enter>
+
