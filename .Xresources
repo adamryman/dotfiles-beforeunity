@@ -12,7 +12,8 @@ URxvt.keysym.C-s: perl:keyboard-select:activate
 
 # Powerline fonts for things terminus does not have
 # http://powerline.readthedocs.io/en/master/tips-and-tricks.html
-urxvt*font: xft:terminus:pixelsize=16,xft:Inconsolata\ for\ Powerline:pixelsize=16
+# it seems that even number fonts create large spaces inbetween lines sometimes
+urxvt*font: xft:terminus:pixelsize=15,xft:Inconsolata\ for\ Powerline:pixelsize=15
 URxvt.keysym.C-S-plus:  font-size:increase
 URxvt.keysym.C-minus:   font-size:decrease
 URxvt.keysym.C-0:       font-size:reset
