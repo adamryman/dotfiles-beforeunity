@@ -8,5 +8,5 @@
 # bash vim command mode search completion
 # http://vim.wikia.com/wiki/Use_vi_shortcuts_in_terminal
 set keymap vi-command
-"k": history-search-forward
-"j": history-search-backward
+"j": history-search-forward
+"k": history-search-backward
