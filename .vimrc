@@ -34,6 +34,9 @@ Plugin 'natw/keyboard_cat.vim'
 " Commenting made easy!
 Plugin 'scrooloose/nerdcommenter'
 
+" Makes vim look nice and show your mode better and git things
+Plugin 'vim-airline/vim-airline'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -197,7 +200,14 @@ set backspace=indent,eol,start
 " http://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work
 map <leader>! :w !sudo tee %<enter>
 
+" Comment code!
 map <leader>cd <plug>NERDCommenterToggle
 
+" Make a bold line to see where cursor is
 map <leader>g :set cursorline!<enter>
 
+" airline with powerline fonts, must be installed
+" https://github.com/vim-airline/vim-airline
+let g:airline_powerline_fonts = 1
+
+set laststatus=2
