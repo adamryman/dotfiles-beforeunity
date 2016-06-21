@@ -211,3 +211,6 @@ map <leader>g :set cursorline!<enter>
 let g:airline_powerline_fonts = 1
 
 set laststatus=2
+
+" Toggle spelling for checking comments and such
+map <leader>l :set spell! spelllang=en_us<enter>
