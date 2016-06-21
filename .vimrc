@@ -209,8 +209,10 @@ map <leader>g :set cursorline!<enter>
 " airline with powerline fonts, must be installed
 " https://github.com/vim-airline/vim-airline
 let g:airline_powerline_fonts = 1
-
+" vim-airline only started when creating a split, this fixes it
 set laststatus=2
+" Get rid of pause when leaving insert mode
+set ttimeoutlen=10
 
 " Toggle spelling for checking comments and such
 map <leader>l :set spell! spelllang=en_us<enter>
