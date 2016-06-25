@@ -1,0 +1,5 @@
+# macbook dpi
+# xrandr --dpi 215
+xrandr --dpi 120
+xset r rate 250 50
+

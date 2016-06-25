@@ -14,6 +14,7 @@
 xmodmap .Xmodmap
 xrdb -merge .Xresources
 xset r rate 250 50
+xrandr --dpi 215
 
 exec i3
 # Default

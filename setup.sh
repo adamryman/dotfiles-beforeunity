@@ -71,6 +71,9 @@ ln -sfn "${cwd}/gsc.sh" "$HOME/.config/dotfile_scripts/gsc.sh"
 ln -sf "${cwd}/.xinitrc" "$HOME/.xinitrc"
 ln -sf "${cwd}/.Xmodmap" "$HOME/.Xmodmap"
 
+# Called after window manager has been run
+ln -sf "${cwd}/.xprofile" "$HOME/.xprofile"
+
 # Mostly urxvt config
 ln -sf "${cwd}/.Xresources" "$HOME/.Xresources"
 
