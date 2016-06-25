@@ -37,6 +37,9 @@ Plugin 'scrooloose/nerdcommenter'
 " Makes vim look nice and show your mode better and git things
 Plugin 'vim-airline/vim-airline'
 
+" Get link to github line number for code
+Plugin 'solars/github-vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -216,3 +219,9 @@ set ttimeoutlen=10
 
 " Toggle spelling for checking comments and such
 map <leader>l :set spell! spelllang=en_us<enter>
+
+" Yank current file path to x clipboard
+map <leader>y :let @+ = expand("%:p")<enter>
+" Zaq? (zaquestion) likes to use xsel instead of mapping the system clipboard
+" to the defualt yank.
+"map <leader>y :silent call system('xsel --clipboard --input', expand("%:p"))<enter>
