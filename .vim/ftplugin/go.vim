@@ -12,3 +12,5 @@ map <leader>\ <c-t>
 map <leader>j :cn<Return>
 map <leader>k :cp<Return>
 
+" Run!
+map <leader>g :GoRun<Return>
