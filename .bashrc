@@ -27,6 +27,10 @@ if which hub > /dev/null; then
 	alias git=hub
 fi
 
+# Make
+# lets clean up
+alias clean='make clean'
+
 # Custom Functions
 
 # search google with w3m
