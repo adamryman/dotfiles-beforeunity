@@ -157,6 +157,8 @@ bind '"\e[Z":menu-complete-backward'
 #bind "set menu-complete-display-prefix on"
 
 # ssh keychain
+# Note, this only adds the ssh key 'id_rsa',
+# I need a solution for multiple keys that may differ on different machines
 eval `keychain --quiet --eval --agents ssh id_rsa`
 
 
