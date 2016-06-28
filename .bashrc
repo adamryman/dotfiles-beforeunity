@@ -134,7 +134,6 @@ function check_git_repo_for_mv {
 alias mv=check_git_repo_for_mv
 
 
-
 user="\[$cyan\]\u\[$reset\]"
 host="\[$purple\]\h\[$reset\]"
 #path="\[$green\]\w\[$reset\]"
@@ -161,6 +160,12 @@ bind '"\e[Z":menu-complete-backward'
 # I need a solution for multiple keys that may differ on different machines
 eval `keychain --quiet --eval --agents ssh id_rsa`
 
+# some more ls aliases
+alias l='ls -1'
+alias la='ls -la'
+
+# agl passes ag's output to less with color
+alias agl='ag --pager="less -XFR"'
 
 
 ### VVVV DEFAULTS I NEED TO UNDERSTAND VVVV ###
@@ -188,10 +193,6 @@ fi
 
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# some more ls aliases
-alias l='ls -1'
-alias la='ls -la'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
