@@ -164,6 +164,12 @@ eval `keychain --quiet --eval --agents ssh id_rsa`
 alias l='ls -1'
 alias la='ls -la'
 
+# Less with color and cancling if it will not scroll the terminal
+alias lesss='less -XFR'
+
+# make and pipe both stdout and stderr to less with color
+alias makel='make 2>&1 | less -XFR'
+
 # agl passes ag's output to less with color
 alias agl='ag --pager="less -XFR"'
 
