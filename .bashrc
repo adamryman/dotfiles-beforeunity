@@ -133,6 +133,12 @@ function check_git_repo_for_mv {
 }
 alias mv=check_git_repo_for_mv
 
+# This function allows to to compare two files using git's diff config
+# These files do not need to be in git repos
+# You can pipe this into anything and have the output be nice
+function diffc {
+	git --no-pager diff --color=always --no-index $1 $2
+}
 
 user="\[$cyan\]\u\[$reset\]"
 host="\[$purple\]\h\[$reset\]"
