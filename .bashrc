@@ -31,21 +31,6 @@ fi
 # lets clean up
 alias clean='make clean'
 
-# Custom Functions
-
-# search google with w3m
-function google() {
-        IFS="+"
-        export query="$@"
-        w3m http://google.com/search?q="$query"
-}
-
-# swap a program in with the current terminal in i3
-function swap() {
-	echo "$@"
-	swap_command="$@"
-	"$swap_command" & disown; sleep 0.6; exit
-}
 
 # append to the history file, don't overwrite it
 # The history file is normally in memory until shell closes
@@ -91,6 +76,16 @@ light_green='\e[38;5;118m'
 # Functions in bash don't seem to really "return" anything. The only way to get
 # a message out of them is to have them print data, then to capture that data
 # via command substitution. That is what we do here.
+
+# Bash/shell escaping is wierd. I am going to just write down a few things I have learned
+# http://wiki.bash-hackers.org/syntax/pe
+
+# http://wiki.bash-hackers.org/scripting/style
+
+# The most important things I have learned.
+# Always call functions and programs via $() when they are part of another command
+# Always get vars via "${FOO}"
+
 function get_git_top_path {
 	top_path=$(git rev-parse --show-toplevel 2> /dev/null) || return
 	echo $top_path
@@ -123,16 +118,16 @@ function check_git_repo_for_mv {
 		echo "Procced anyways? (y or n or git (for git mv)):"
 		read response
 		if [ $response == 'y' ]; then
-			echo "$ mv $@"
-			mv $@
+			echo "$ mv "${@}""
+			mv "${@}"
 		else
 			if [ $response == 'git' ]; then
 				echo "$ git mv $@"
-				git mv $@
+				git mv "${@}"
 			fi
 		fi
 	else
-		mv $@
+		mv "${@}"
 	fi
 }
 alias mv=check_git_repo_for_mv
@@ -141,7 +136,21 @@ alias mv=check_git_repo_for_mv
 # These files do not need to be in git repos
 # You can pipe this into anything and have the output be nice
 function diffc {
-	git --no-pager diff --color=always --no-index $1 $2
+	git --no-pager diff --color=always --no-index "${1}" "${2}"
+}
+
+# search google with w3m
+function google {
+        IFS="+"
+        export query="${@}"
+        w3m http://google.com/search?q="${query}"
+}
+
+# swap a program in with the current terminal in i3
+function swap {
+	echo "${@}"
+	swap_command="${@}"
+	"${swap_command}" & disown; sleep 0.6; exit
 }
 
 user="\[$cyan\]\u\[$reset\]"
