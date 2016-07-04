@@ -184,8 +184,9 @@ alias treee='tree -C | less -XRF'
 alias makel='make 2>&1 | less -XFR'
 
 # agl passes ag's output to less with color
-alias agl='ag --pager="less -XFR"'
+alias agg='ag --pager="less -XFR"'
 
+alias cppwd='pwd | tr "\n" " "  | xsel -i -b'
 
 ### VVVV DEFAULTS I NEED TO UNDERSTAND VVVV ###
 
