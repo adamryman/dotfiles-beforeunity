@@ -100,9 +100,13 @@ function git_top {
 	echo $(get_git_top_path)
 }
 
+function get_repo_path {
+	repopath=$(git rev-parse --show-toplevel 2> /dev/null)
+	echo $repopath
+}
 
 function get_repo_name {
-	repo=$(basename $(git rev-parse --show-toplevel 2> /dev/null) 2> /dev/null) || return
+	repo=$(basename $(get_repo_path) 2> /dev/null) || return
 	echo "("$repo")"
 }
 
