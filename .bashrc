@@ -177,6 +177,9 @@ alias la='ls -la'
 # Less with color and cancling if it will not scroll the terminal
 alias lesss='less -XFR'
 
+# Tree into less with color
+alias treee='tree -C | less -XRF'
+
 # make and pipe both stdout and stderr to less with color
 alias makel='make 2>&1 | less -XFR'
 
