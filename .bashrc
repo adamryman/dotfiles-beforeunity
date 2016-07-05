@@ -84,7 +84,7 @@ light_green='\e[38;5;118m'
 
 # The most important things I have learned.
 # Always call functions and programs via $() when they are part of another command
-# Always get vars via "${FOO}"
+# Always get vars via "${FOO}" WITH QUOTES
 
 function get_git_top_path {
 	top_path=$(git rev-parse --show-toplevel 2> /dev/null) || return
