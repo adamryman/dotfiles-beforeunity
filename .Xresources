@@ -22,11 +22,13 @@ URxvt.keysym.C-0:       font-size:reset
 URxvt*foreground:   #c5c8c6
 URxvt*background:   #000000
 URxvt*cursorColor:  #aeafad
+# These are ANSI Escape for SGR colors
+# https://en.wikipedia.org/wiki/ANSI_escape_code#Colors
 URxvt*color0:       #000000
-URxvt*color1:       #912226
+URxvt*color1:       #FF604D
 URxvt*color2:       #778900
-URxvt*color3:       #ae7b00
-URxvt*color4:       #1d2594
+URxvt*color3:       #ECB130
+URxvt*color4:       #5CB2FC
 URxvt*color5:       #682a9b
 URxvt*color6:       #2b6651
 URxvt*color7:       #929593
