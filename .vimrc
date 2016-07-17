@@ -1,6 +1,7 @@
 " Adam Ryman .vimrc
-
+" ----------------------------------------------------------------------------
 "### Configure Vundle ###
+" ----------------------------------------------------------------------------
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -26,7 +27,9 @@ Plugin 'godlygeek/tabular'
 
 Plugin 'tpope/vim-surround'
 
+" Auto-pairing "" {} () [] ''
 Plugin 'Raimondi/delimitMate'
+"Plugin 'jiangmiao/auto-pairs'
 
 "Silly
 Plugin 'natw/keyboard_cat.vim'
@@ -40,25 +43,20 @@ Plugin 'vim-airline/vim-airline'
 " Get link to github line number for code
 Plugin 'solars/github-vim'
 
+" Tagbar, for golang
+Plugin 'majutsushi/tagbar'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
+" ----------------------------------------------------------------------------
 "### End Configure Vundle ###
-"
-"### Start General Configuration ###
+" ----------------------------------------------------------------------------
 
+" ----------------------------------------------------------------------------
+"### Start General Configuration ###
+" ----------------------------------------------------------------------------
 " Some Linux distributions set filetype /etc/vimrc
 " This is to force them away
 if exists("g:did_load_filettpes")
@@ -69,7 +67,7 @@ endif
 filetype plugin indent on
 
 "remove trailing whitespace on save
-autocmd BufWritePre * :%s/\s\+$//e
+"autocmd BufWritePre * :%s/\s\+$//e
 
 
 "IMPORTANT!!!!
@@ -91,6 +89,10 @@ set number
 
 "Show matching ({[]})
 set showmatch
+
+set linebreak
+
+set showbreak=↪\ \
 
 "Allows case insensitive searching with smart exceptions
 set ignorecase
@@ -207,15 +209,7 @@ map <leader>! :w !sudo tee %<enter>
 map <leader>cd <plug>NERDCommenterToggle
 
 " Make a bold line to see where cursor is
-map <leader>g :set cursorline!<enter>
-
-" airline with powerline fonts, must be installed
-" https://github.com/vim-airline/vim-airline
-let g:airline_powerline_fonts = 1
-" vim-airline only started when creating a split, this fixes it
-set laststatus=2
-" Get rid of pause when leaving insert mode
-set ttimeoutlen=10
+map <leader>g :set cursorline!<Return>:set cursorcolumn!<Return>
 
 " Toggle spelling for checking comments and such
 map <leader>l :set spell! spelllang=en_us<enter>
@@ -225,3 +219,53 @@ map <leader>y :let @+ = expand("%:p")<enter>
 " Zaq? (zaquestion) likes to use xsel instead of mapping the system clipboard
 " to the defualt yank.
 "map <leader>y :silent call system('xsel --clipboard --input', expand("%:p"))<enter>
+"
+
+" Clear search
+nnoremap <CR> :let @/ = ""<Return>
+
+" airline with powerline fonts, must be installed
+" https://github.com/vim-airline/vim-airline
+let g:airline_powerline_fonts = 1
+" vim-airline only started when creating a split, this fixes it
+set laststatus=2
+" Get rid of pause when leaving insert mode
+set ttimeoutlen=10
+
+
+
+" gotags tagbar
+" https://github.com/jstemmer/gotags
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
+set hlsearch
+
+let g:delimitMate_expand_cr=1
+set incsearch
+
+
