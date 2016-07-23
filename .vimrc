@@ -22,7 +22,7 @@ colorscheme monokai
 " Highlight matching search terms
 set hlsearch
 " Set search register to empty string, clearing search
-nnoremap <CR> :let @/ = ""<Return>
+nnoremap <Bslash> :let @/ = ""<Return>
 
 " }}}
 " Code specific {{{ --------------------------------------------------------------
