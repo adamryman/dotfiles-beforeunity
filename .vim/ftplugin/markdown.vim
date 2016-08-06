@@ -2,26 +2,24 @@
 setlocal spell spelllang=en_us
 
 function! RenderMarkdown()
-	let renderpath=expand('%:p:h') . "/"
-	let filename=expand('%:t')
-	let fullfilepath=expand('%:p')
-	execute "silent ! mkdir -p " . renderpath ."__render; pandoc -o " . renderpath . "__render/" . filename . ".html " . fullfilepath
-	redraw!
+	silent call system('mkdir -p ./.render/')
+
+	let rendercmd='pandoc ' . expand('%') . ' -H $HOME/dotfiles/css/github-pandoc.css -t html > ./.render/' . expand('%') . '.html'
+	echo rendercmd
+	call system(rendercmd)
 endfunction
 
 function! OpenInFirefox()
-	let renderpath=expand('%:p:h') . "/"
-	let filename=expand('%:t')
-	execute "silent ! firefox " . renderpath . "__render/" . filename . ".html"
-	redraw!
+	let opencmd='firefox ./.render/' . expand('%') . '.html'
+	call system(opencmd)
 endfunction
 
 command! Render call RenderMarkdown()
-command! Open call OpenInFirefox()
+"command! Open call OpenInFirefox()
 
 " For opening the render in firefox and rerendering it
-"map <leader><leader>j :call RenderMarkdown()<enter>
-"map <leader><leader>f :call OpenInFirefox()<enter>
+map <leader><leader>j :call RenderMarkdown()<enter>
+map <leader><leader>f :call OpenInFirefox()<enter>
 
 " Allows me to align pandoc pipe tables using Tabularize
 "map <leader><leader>t :Tab /\|<enter>

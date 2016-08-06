@@ -181,7 +181,7 @@ map <leader>1 q2
 " * register)
 " This allows for yy to go to the clipboard, which is what I want for now. the
 " whole <leader>' was getting pretty annoying to be honest
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
 
 " Do a string replacement of current visual selection
 map <leader>/ yq:i%s/<Esc>pa/
@@ -215,14 +215,15 @@ map <leader>g :set cursorline!<Return>:set cursorcolumn!<Return>
 map <leader>l :set spell! spelllang=en_us<enter>
 
 " Yank current file path to x clipboard
-map <leader>y :let @+ = expand("%:p")<enter>
+map <leader><leader>y :let @+ = expand("%:p")<enter>
 " Zaq? (zaquestion) likes to use xsel instead of mapping the system clipboard
 " to the defualt yank.
 "map <leader>y :silent call system('xsel --clipboard --input', expand("%:p"))<enter>
 "
+map <leader>y :silent call system('xclip -selection c -in', @0)<enter>
 
 " Clear search
-nnoremap <CR> :let @/ = ""<Return>
+map <leader><leader><enter> :let @/ = ""<Return>
 
 " airline with powerline fonts, must be installed
 " https://github.com/vim-airline/vim-airline
@@ -269,3 +270,4 @@ let g:delimitMate_expand_cr=1
 set incsearch
 
 
+map <leader><leader>; = <esc>

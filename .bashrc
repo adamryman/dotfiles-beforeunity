@@ -2,8 +2,7 @@
 export PATH=/usr/bin:/usr/local/bin:/bin:/usr/sbin:/sbin
 
 # Pip is putting things here
-export PATH=$PATH:$HOME/.local/bin
-
+export PATH=$PATH:$HOME/.local/bin 
 export projects=$HOME/projects
 
 # GOOOOOOOO
@@ -37,8 +36,8 @@ alias clean='make clean'
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=100000
-HISTFILESIZE=200000
+HISTSIZE=1000000
+HISTFILESIZE=2000000
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
@@ -111,26 +110,6 @@ function get_git_branch {
 	echo "("${ref#refs/heads/}")"
 }
 
-# If in git repo and mv command is used then prompt if git mv should be used
-function check_git_repo_for_mv {
-	if [ $(get_git_top_path) ]; then
-		echo "In git directory, please use 'git mv'"
-		echo "Procced anyways? (y or n or git (for git mv)):"
-		read response
-		if [ $response == 'y' ]; then
-			echo "$ mv "${@}""
-			mv "${@}"
-		else
-			if [ $response == 'git' ]; then
-				echo "$ git mv $@"
-				git mv "${@}"
-			fi
-		fi
-	else
-		mv "${@}"
-	fi
-}
-alias mv=check_git_repo_for_mv
 
 # This function allows to to compare two files using git's diff config
 # These files do not need to be in git repos
@@ -243,4 +222,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
+alias note="vim $(date +%s).md"

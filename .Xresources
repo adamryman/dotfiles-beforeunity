@@ -21,9 +21,11 @@ URxvt.keysym.C-0:       font-size:reset
 
 URxvt*foreground:   #c5c8c6
 URxvt*background:   #000000
-URxvt*cursorColor:  #aeafad
-# These are ANSI Escape for SGR colors
-# https://en.wikipedia.org/wiki/ANSI_escape_code#Colors
+URxvt*cursorColor:  #aeafad 
+# For some reason this made my cursor pink if I uncomment it. I kind of like it
+#URxvt*cursorColor:  #aeafad # These are ANSI Escape for SGR colors # https://en.wikipedia.org/wiki/ANSI_escape_code#Colors
+
+# These are ANSI Escape for SGR colors # https://en.wikipedia.org/wiki/ANSI_escape_code#Colors
 URxvt*color0:       #000000
 URxvt*color1:       #FF604D
 URxvt*color2:       #778900
@@ -49,4 +51,5 @@ URxvt*saveLines: 10000
 URxvt.copyCommand: xsel --selection --input
 URxvt.pasteCommand: xsel --selection --output
 
-Xft.dpi: 110
+#Xft.dpi: 110
+Xft.dpi: 220

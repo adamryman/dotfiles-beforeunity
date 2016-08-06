@@ -207,3 +207,5 @@ exec --no-startup-id dunst
 exec --no-startup-id dropboxd
 
 exec --no-startup-id redshift
+
+focus_follows_mouse no
