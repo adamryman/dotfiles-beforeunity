@@ -1,0 +1,114 @@
+" Some Linux distributions set filetype /etc/vimrc
+" This is to force them away
+if exists("g:did_load_filettpes")
+	filetype off
+	filetype plugin indent off
+endif
+
+filetype plugin indent on
+
+set linebreak
+
+set showbreak=↪\ \
+
+"Allows case insensitive searching with smart exceptions
+set ignorecase
+set smartcase
+
+"letting me see the string of commands
+:set showcmd
+
+"change my leader to space, using map allows me to see it with a \ in the
+"Also space space to leader leader for DOUBLE COMMANDS
+"showcmd space
+map <space> <leader>
+map <space><space> <leader><leader>
+
+let maplocalleader = ","
+
+"Quick quit and write
+map <leader>q :q<enter>
+map <leader>w :w<enter>
+
+"Lets see how fast I can add stuff to my vimrc
+map <leader>v :sp ~/.vimrc<enter>G
+
+map <leader>o :sp<space>
+
+"Resource current vimrc and current ftplugin
+if !exists("*ReSource")
+	function! ReSource()
+		execute "source ~/.vimrc"
+		execute "set filetype=" . &filetype
+	endfunction
+endif
+map <leader>s :call ReSource()<enter>
+
+"Allows me to edit the config of any filetype quickly
+function! OpenFtpluginFile()
+	execute ":sp ~/.vim/ftplugin/" . &filetype . ".vim"
+endfunction
+map <leader>f :call OpenFtpluginFile()<enter>
+
+"Lets me see those tabs and spaces
+set listchars=tab:>\ ,space:#
+map <leader>t :set list!<enter>
+
+"4 space tabs are nicer by default
+set tabstop=4
+set shiftwidth=4
+
+"Global yank and put from system buffer / clipboard
+"For more info http://stackoverflow.com/a/11489440
+"System buffer
+map <leader>' "+
+"Quick system buffer put / clipboard
+map <leader>p "+p
+
+"Personal help file currently located at $HOME/.vim.helpfiles/new-commands.md
+"Eventually learn how vim docs work and put it there
+map <leader>h :sp $HOME/.vim/helpfiles/new-commands.md<enter>zRG
+
+"TwoNote!
+"map <leader>j :TwoNote<enter>
+
+" I want faster macros
+" So leader 1 will start recording a macro on key 2
+" and leader 2 will play that back
+map <leader>2 @2
+map <leader>1 q2
+
+" Do a string replacement of current visual selection
+map <leader>/ yq:i%s/<Esc>pa/
+
+" For some reason backspace was not backspacing text that was already written
+" before that instance of insert mode
+" this fixed it.
+" Effected Asus ux305la with xubuntu
+" http://stackoverflow.com/a/5019353
+set backspace=indent,eol,start
+
+" sudo save
+" http://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work
+map <leader>! :w !sudo tee %<enter>
+
+" Comment code!
+map <leader>cd <plug>NERDCommenterToggle
+
+" Make a bold line to see where cursor is
+map <leader>g :set cursorline!<Return>:set cursorcolumn!<Return>
+
+" Toggle spelling for checking comments and such
+map <leader>l :set spell! spelllang=en_us<enter>
+
+" Yank current file path to x clipboard
+map <leader>y :let @+ = expand("%:p")<enter>
+" Zaq? (zaquestion) likes to use xsel instead of mapping the system clipboard
+" to the defualt yank.
+"map <leader>y :silent call system('xsel --clipboard --input', expand("%:p"))<enter>
+"
+
+
+set incsearch
+
+

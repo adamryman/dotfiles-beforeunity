@@ -222,7 +222,7 @@ map <leader>y :let @+ = expand("%:p")<enter>
 "
 
 " Clear search
-nnoremap <CR> :let @/ = ""<Return>
+"nnoremap <CR> :let @/ = ""<Return>
 
 " airline with powerline fonts, must be installed
 " https://github.com/vim-airline/vim-airline
